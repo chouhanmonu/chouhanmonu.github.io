@@ -29,7 +29,7 @@
   - Recent Work
   - Technologies
   - Contact form, contact details & social links
-- Works ([Inspiration1](https://www.fominnalina.com/), [Inpiration2](https://ali-ch-portfolio.vercel.app/projects), [inspiration3](https://mertcankose.vercel.app/#works))
+- Works
   - Title
   - Subtitle
   - WorkList

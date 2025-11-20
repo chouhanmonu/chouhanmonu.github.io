@@ -43,7 +43,15 @@
 
 # Projects
 
-- SSO
+Here's the list of the projects that I have worked on for the last 4 years.
+
+## SSO
+
+- A single sign-on system that provides secure access across multiple platforms.
+- [Image]
+- Chose golang with iris web framework for high throughput
+- My Role
+
 - Chat App
 - Shopify Theme Development
 - Ruta
