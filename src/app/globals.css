@@ -88,7 +88,7 @@ header {
   .p-button.p-button-icon-only.p-button-rounded {
     width: 2rem;
     height: 2rem;
-    color: var(--color-gray-700);
+    color: var(--color-gray-100);
   }
 }
 /* end */

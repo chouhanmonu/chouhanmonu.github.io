@@ -10,7 +10,7 @@ import { Button } from "primereact/button";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 left-0 shadow shadow-gray-200 bg-white z-1">
+    <header className="sticky top-0 left-0 border-b border-gray-700 z-1">
       <div
         className={classNames(
           "flex justify-between items-center py-2.5",

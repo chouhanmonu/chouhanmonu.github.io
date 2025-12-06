@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
       <PrimeReactProvider>
         <body
           className={classNames(
-            "text-gray-700",
+            "text-gray-100 bg-gray-950",
             poppins.variable,
             roboto.variable,
             robotoSlab.variable,
