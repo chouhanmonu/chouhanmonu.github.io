@@ -12,21 +12,21 @@ import Footer from "@/components/layout/Footer";
 import { PrimeReactProvider } from "primereact/api";
 import classNames from "classnames";
 
-const poppins = Poppins({
+const headingFont = Geist({
   variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-const roboto = Roboto({
+const bodyFont = Geist_Mono({
   variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-const robotoSlab = Roboto_Slab({
+const titleFont = Roboto_Slab({
   variable: "--font-title",
   subsets: ["latin"],
   display: "swap",
@@ -51,10 +51,10 @@ export default function RootLayout({ children }) {
         <body
           className={classNames(
             "text-gray-100 bg-gray-950",
-            poppins.variable,
-            roboto.variable,
-            robotoSlab.variable,
-            roboto.className
+            headingFont.variable,
+            bodyFont.variable,
+            titleFont.variable,
+            bodyFont.className
           )}
         >
           <Header />
