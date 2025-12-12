@@ -58,7 +58,10 @@ export default function RootLayout({ children }) {
           )}
         >
           <Header />
-          <main id="MainContent" className="page-main-content py-18 space-y-20">
+          <main
+            id="MainContent"
+            className="page-main-content pt-18 pb-32 space-y-20"
+          >
             {children}
           </main>
           <Footer />

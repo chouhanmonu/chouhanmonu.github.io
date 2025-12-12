@@ -3,12 +3,12 @@ import Logo from "../Logo";
 import Link from "next/link";
 import InstagramIcon from "@/assets/icons/InstagramIcon";
 import TwitterIcon from "@/assets/icons/TwitterIcon";
-import FacebookIcon from "@/assets/icons/FacebookIcon";
 import classNames from "classnames";
 import { getSectionClasses } from "@/utils/helpers";
 import { EMAIL, MAIN_NAV } from "@/utils/consts";
-import { AtSymbolIcon } from "@heroicons/react/24/outline";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
+import DiscordIcon from "@/assets/icons/DiscordIcon";
+import LinkedInIcon from "@/assets/icons/LinkedInIcon";
 
 export default function Footer() {
   return (
@@ -20,15 +20,18 @@ export default function Footer() {
         <div className="flex gap-12 justify-between">
           <div className="flex flex-col">
             <Logo />
-            <div className="flex gap-3 mt-4">
+            <div className="flex items-center gap-3 mt-4">
               <Link href="#">
                 <InstagramIcon className="w-5 text-gray-400 hover:text-gray-800 transition-colors" />
               </Link>
               <Link href="#">
-                <TwitterIcon className="w-5 text-gray-400 hover:text-gray-800 transition-colors" />
+                <LinkedInIcon className="w-6 text-gray-400 hover:text-gray-800 transition-colors" />
               </Link>
               <Link href="#">
-                <FacebookIcon className="w-5 text-gray-400 hover:text-gray-800 transition-colors" />
+                <DiscordIcon className="w-5 text-gray-400 hover:text-gray-800 transition-colors" />
+              </Link>
+              <Link href="#">
+                <TwitterIcon className="w-4.5 text-gray-400 hover:text-gray-800 transition-colors" />
               </Link>
             </div>
             <div className="mt-12 text-sm text-gray-400">

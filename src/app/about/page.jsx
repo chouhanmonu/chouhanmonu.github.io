@@ -17,6 +17,8 @@ import Link from "next/link";
 import React from "react";
 import { TECHNOLOGIES } from "./conts";
 import Button from "@/components/Button";
+import SectionTitle from "@/components/SectionTitle";
+import SectionSubtitle from "@/components/SectionSubtitle";
 
 export default function About() {
   return (
@@ -115,13 +117,11 @@ export default function About() {
       {/* tech stack section */}
       <div className={getSectionClasses()}>
         <div className="">
-          <div className="font-heading tracking-tight  text-3xl font-semibold leading-12">
-            Technical stack
-          </div>
-          <p className="text-gray-400 tracking-wider">
+          <SectionTitle>Technical Stack</SectionTitle>
+          <SectionSubtitle>
             Over the years, I have worked with a variety of technologies. Here
             are some of the technologies I have experience with:
-          </p>
+          </SectionSubtitle>
 
           <div className="mt-8">
             <ul className="flex gap-4 flex-wrap">

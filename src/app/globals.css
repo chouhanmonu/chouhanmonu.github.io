@@ -91,4 +91,9 @@ header {
     color: var(--color-gray-100);
   }
 }
+
+.required::after {
+  content: "*";
+  color: var(--color-red-500);
+}
 /* end */
