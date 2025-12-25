@@ -20,7 +20,7 @@ export default function Header() {
         <Logo />
         <div className="flex gap-5 items-center">
           <nav aria-label="Main">
-            <ul className="flex gap-3 items-center">
+            <ul className="flex gap-4 items-center">
               {MAIN_NAV.map((link, i) => (
                 <Link href={link.href} key={i}>
                   {link.label}
@@ -28,13 +28,6 @@ export default function Header() {
               ))}
             </ul>
           </nav>
-          <Button
-            severity="secondary"
-            icon={<MoonIcon width={20} />}
-            outlined
-            rounded
-            aria-label="Night mode"
-          />
         </div>
       </div>
     </header>

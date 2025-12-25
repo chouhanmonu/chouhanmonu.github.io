@@ -79,6 +79,25 @@
   }
 }
 
+/* Firefox: Global scrollbar color (thumb and track) and width */
+html {
+  scrollbar-color: var(--color-gray-100) var(--color-gray-950); /* thumb track */
+}
+
+/* WebKit browsers (Chrome, Safari, Edge): Global scrollbar styling */
+*::-webkit-scrollbar-track {
+  background: var(--color-gray-950); /* Track background color */
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--color-gray-100); /* Thumb color */
+  border-radius: 50%; /* Thumb border radius */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-400); /* Optional: Darker thumb on hover */
+}
+
 /* custom */
 .page-main-content {
   min-height: max(80vh, 600px);
@@ -96,4 +115,5 @@ header {
   content: "*";
   color: var(--color-red-500);
 }
+
 /* end */

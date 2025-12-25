@@ -1,3 +1,8 @@
+import { NAME } from "../utils/consts";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import { PrimeReactProvider } from "primereact/api";
+import classNames from "classnames";
 import {
   Geist,
   Geist_Mono,
@@ -6,11 +11,7 @@ import {
   Roboto_Slab,
 } from "next/font/google";
 import "./globals.css";
-import { NAME } from "../utils/consts";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import { PrimeReactProvider } from "primereact/api";
-import classNames from "classnames";
+import "react-responsive-modal/styles.css";
 
 const headingFont = Geist({
   variable: "--font-heading",

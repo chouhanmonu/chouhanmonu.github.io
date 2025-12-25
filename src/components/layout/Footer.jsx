@@ -67,6 +67,13 @@ export default function Footer() {
           </div>
         </div>
       </nav>
+      <div className="border-t border-gray-800">
+        <div className={getSectionClasses()}>
+          <div className="py-8 text-center text-gray-400 text-sm">
+            Crafted with care in India
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }
