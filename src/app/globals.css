@@ -117,3 +117,11 @@ header {
 }
 
 /* end */
+
+/* vendor overrides */
+
+.react-responsive-modal-container .p-button:focus {
+  box-shadow: rgb(255 255 255) 0px 0px 0px 1px;
+}
+
+/* end */

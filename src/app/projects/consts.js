@@ -83,7 +83,7 @@ export const PROJECTS = [
       {
         label: "Seamless User Onboarding",
         description:
-          "Quick login/signup via email, Google OAuth, or multi-device support, with asymmetric JWT tokens for secure, stateless authentication.",
+          "Quick login/signup via email, Google OAuth, and multi-device support, with asymmetric JWT tokens for secure, stateless authentication.",
       },
       {
         label: "Intuitive Group Management",
@@ -108,7 +108,7 @@ export const PROJECTS = [
     ],
     technologies: {
       description:
-        "Leveraged a modern full-stack architecture for cross-platform compatibility and scalability. The admin dashboard and landing page were built with Next.js for server-side rendering and SEO optimization, styled with Tailwind CSS for responsive, maintainable components. The backend powers robust data operations using NestJS for structured, enterprise-grade APIs, PostgreSQL for reliable relational storage, TypeORM for efficient ORM handling, and GraphQL for flexible, client-optimized querying. (Note: Mobile app prototyped in Flutter with Bloc for state management, though primary focus was web and backend.)",
+        "Leveraged a modern full-stack architecture for cross-platform compatibility and scalability. The admin dashboard and landing page were built with Next.js for server-side rendering and SEO optimization, styled with Tailwind CSS for responsive, maintainable components. The backend powers robust data operations using NestJS for structured, enterprise-grade APIs, PostgreSQL for reliable relational storage, TypeORM for efficient ORM handling, and GraphQL for flexible, client-optimized querying. Flutter with Bloc for state management is being used for building the mobile app.",
       stacks: [
         {
           category: "Frontend (Admin & Landing)",
@@ -132,7 +132,11 @@ export const PROJECTS = [
         },
         {
           category: "Additional Tools",
-          technologies: ["Docker", "AWS (EC2/S3)", "GitHub Actions"],
+          technologies: [
+            "Docker for containerization",
+            "AWS for hosting (EC2/S3)",
+            "GitHub Actions for CI/CD pipelines",
+          ],
         },
       ],
       list: [
@@ -157,7 +161,7 @@ export const PROJECTS = [
         {
           label: "Backend Architecture",
           description:
-            "Engineered the NestJS server from the ground up, integrating industry-leading practices for security (e.g., helmet for headers, bcrypt for hashing) and performance (e.g., query optimization via TypeORM, enabling graphql). Implemented multi-device login with refresh token rotation, Google OAuth federation, and rate limiting to handle 1,000+ concurrent requests without degradation.",
+            "Engineered the NestJS server from the ground up, integrating industry-leading practices for security (e.g., helmet for headers, bcrypt for hashing) and performance (e.g., query optimization via TypeORM, enabling graphql). Implemented multi-device login with refresh token rotation, Google OAuth, and rate limiting to handle 1,000+ concurrent requests without degradation.",
         },
         {
           label: "Feature-Driven Design",
@@ -192,7 +196,7 @@ export const PROJECTS = [
       {
         label: "High-Performance Real-Time Delivery",
         description:
-          "Leverages Redis PubSub with Socket.io to achieve sub-50ms message delivery, optimized for concurrent users and high-throughput messaging.",
+          "Leverages Redis PubSub with Socket.io to achieve sub-100ms message delivery, optimized for concurrent users and high-throughput messaging.",
       },
     ],
     technologies: {
@@ -228,7 +232,7 @@ export const PROJECTS = [
             "React",
             "Vite",
             "Socket.io Client",
-            "TipTap / Slate.js",
+            "Slate.js",
             "React Query",
             "Axios",
           ],
@@ -262,7 +266,7 @@ export const PROJECTS = [
       ],
     },
     outcomes:
-      "Delivered a battle-tested MVP capable of supporting real-time encrypted messaging and collaborative notes at scale. The platform achieved sub-50ms message delivery in internal testing and provides a flexible foundation for community-driven forks, feature extensions, and long-term evolution as an open-source communication ecosystem.",
+      "Delivered a battle-tested MVP capable of supporting real-time encrypted messaging and collaborative notes at scale. The platform achieved sub-100ms message delivery in internal testing and provides a flexible foundation for community-driven forks, feature extensions, and long-term evolution as an open-source communication ecosystem.",
     imageUrl: "/images/chat.webp",
     tags: ["work-in-progress"],
   },
@@ -301,7 +305,7 @@ export const PROJECTS = [
     ],
     technologies: {
       description:
-        "Implemented a robust full-stack architecture using NestJS to handle complex business logic and Prisma ORM for type-safe PostgreSQL access. Supabase was leveraged for scalable authentication and storage, with Swagger providing comprehensive API documentation. The chat module uses Rocket.Chat for reliable, self-hosted real-time messaging. Frontend applications are built with React, using Redux Toolkit and React Query for efficient state management and data synchronization, and styled with Tailwind CSS for maintainable, responsive UI.",
+        "The App was implemented with a robust architecture using NestJS to handle complex business logic and Prisma ORM for type-safe PostgreSQL access. Supabase was leveraged for scalable authentication and storage, with Swagger providing comprehensive API documentation. The chat module uses Rocket.Chat for reliable, self-hosted real-time messaging. Frontend applications are built with React, using Redux Toolkit and React Query for efficient state management and data synchronization, and styled with Tailwind CSS for maintainable, responsive UI.",
       stacks: [
         {
           category: "Backend",
@@ -326,6 +330,13 @@ export const PROJECTS = [
           category: "Customer Application",
           technologies: ["React", "React Query", "Tailwind CSS"],
         },
+        {
+          category: "Additional Tools",
+          technologies: [
+            "Figma (design prototyping)",
+            "GitHub Actions for CI/CD pipelines",
+          ],
+        },
       ],
       list: [
         "NestJS",
@@ -334,6 +345,8 @@ export const PROJECTS = [
         "Rocket.Chat",
         "React",
         "Tailwind CSS",
+        "Figma",
+        "GitHub",
       ],
     },
     role: {
@@ -437,7 +450,7 @@ export const PROJECTS = [
         {
           label: "CMS Architecture & Schema Design",
           description:
-            "Designed intuitive Storyblok schemas with references for artists, exhibitions, and footnotes, reducing client content-editing effort by 70%.",
+            "Designed intuitive Storyblok schemas with references for artist, exhibition, and footnote fields, reducing client content-editing effort by 70%.",
         },
         {
           label: "UI/UX & Visual Refinement",
@@ -452,7 +465,7 @@ export const PROJECTS = [
       ],
     },
     outcomes:
-      "The platform has been live since launch, increasing Galleryske's online presence by 150% and enabling independent content updates through a modular CMS. It stands as a scalable digital foundation that blends art, storytelling, and commerce, demonstrating strong expertise in Shopify integrations, CMS design, and deadline-driven delivery.",
+      "The platform has been live since launch, increasing Galleryske's online presence by 150% and enabling independent content updates through a modular CMS. It stands as a scalable digital foundation that blends art, storytelling, and commerce, demonstrating my strong expertise in Shopify integrations, CMS design, and deadline-driven delivery.",
     imageUrl: "/images/galleryske.webp",
     websiteLink: "https://galleryske.com/",
     gitHub: {
@@ -470,7 +483,7 @@ export const PROJECTS = [
       {
         label: "Conversion-Driven Features",
         description:
-          "Includes AI-driven upsell prompts, wishlist functionality, and custom-built sections designed to increase engagement and boost store conversions by up to 25%.",
+          "Includes feature-rich sections for upselling, wishlist functionality, and custom-built sections designed to increase engagement and boost store conversions by up to 25%.",
       },
       {
         label: "Advanced Theme Customization",
@@ -513,7 +526,7 @@ export const PROJECTS = [
     },
     role: {
       summary:
-        "As the sole theme developer, I owned the project end-to-end from ideation to Theme Store submission readiness:",
+        "As a key developer on the team, I spearheaded research, integrations, and optimizations from ideation to Theme Store readiness, collaborating closely for seamless delivery:",
       contributions: [
         {
           label: "Research & Competitive Analysis",
@@ -538,7 +551,7 @@ export const PROJECTS = [
       ],
     },
     outcomes:
-      "Produced a Theme Store-ready Shopify theme that meets Shopify's highest standards for performance, accessibility, and customization. The project demonstrates deep expertise in Shopify theme architecture, conversion-focused design, and disciplined delivery within a highly regulated marketplace.",
+      "Developing a Store-ready Shopify theme that aligns with Shopify's rigorous standards for performance, accessibility, and customization. This ongoing work-in-progress highlights my expertise in Shopify theme architecture, conversion-optimized design, and methodical delivery tailored for a competitive marketplace.",
     imageUrl: "/images/shopify-theme.webp",
     tags: ["work-in-progress"],
   },
@@ -577,7 +590,7 @@ export const PROJECTS = [
     ],
     technologies: {
       description:
-        "Built on Shopify's core ecosystem using Liquid-templated HTML, SCSS, and JavaScript for dynamic storefronts. Vite powers fast, modular asset bundling and hot reloading, while Shopify CLI supports local development and deployments. GitHub Actions automates CI/CD workflows for validation, version control, and zero-downtime updates.",
+        "Built on Shopify's core ecosystem using Liquid-templated HTML, SCSS, and JavaScript for dynamic storefronts. Vite powers fast, modular asset bundling, while Shopify CLI supports local development and deployments. GitHub Actions automates CI/CD workflows for validation, version control, and zero-downtime updates.",
       stacks: [
         {
           category: "Design & Prototyping",

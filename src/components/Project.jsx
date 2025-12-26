@@ -22,7 +22,7 @@ const mapTagToEl = (tag, isShort = true) => {
     case "confidential":
       return <Tag color="orange">{isShort ? "CONF" : "Confidential"}</Tag>;
     case "work-in-progress":
-      return <Tag color="sky">{isShort ? "WIP" : "Work in Progress"}</Tag>;
+      return <Tag color="sky">{isShort ? "WIP" : "Work-in-Progress"}</Tag>;
     default:
       return <></>;
   }
@@ -94,10 +94,10 @@ export default function Project({
           overlay: "bg-black/80! backdrop-blur-sm",
           modal:
             "bg-gray-950! max-w-[880px]! my-10! h-[calc(100dvh-80px)] border border-gray-700 rounded-md p-0!",
-          closeIcon: "hidden",
         }}
         open={isModalOpen}
         onClose={() => setIsModalOpen(false)}
+        showCloseIcon={false}
       >
         <div className="sticky top-0 left-0 p-5 bg-black/85 backdrop-blur-sm border-b border-gray-700">
           <div>
