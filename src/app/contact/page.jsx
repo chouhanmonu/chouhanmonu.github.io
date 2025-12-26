@@ -12,6 +12,8 @@ import {
 } from "@heroicons/react/24/outline";
 import React from "react";
 import { JSX_SOCIAL_LINKS } from "./consts";
+import { EMAIL } from "@/utils/consts";
+import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -79,13 +81,15 @@ export default function Contact() {
             <div>Or get in touch using...</div>
             <ul className="flex gap-4 flex-wrap mt-4">
               {JSX_SOCIAL_LINKS.map((link, i) => (
-                <li
-                  className="flex gap-2 border py-1 px-2 border-gray-700 rounded-md items-center text-gray-400"
-                  key={i}
-                >
-                  {link.icon}
-                  {link.label}
-                  <ArrowRightIcon className="w-4 ml-2" />
+                <li key={i}>
+                  <Link
+                    href={link.link || "#"}
+                    className="flex gap-2 border py-1 px-2 border-gray-700 rounded-md items-center text-gray-400"
+                  >
+                    {link.icon}
+                    {link.label}
+                    <ArrowRightIcon className="w-4 ml-2" />
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -109,11 +113,8 @@ export default function Contact() {
                 <span>Email:</span>
               </div>
               <div>
-                <a
-                  className="text-gray-400"
-                  href="mailto:chouhan.monu07@gmail.com"
-                >
-                  chouhan.monu07@gmail.com
+                <a className="text-gray-400" href={`mailto:${EMAIL}`}>
+                  {EMAIL}
                 </a>
               </div>
             </div>
