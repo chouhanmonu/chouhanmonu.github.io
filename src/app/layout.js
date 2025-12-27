@@ -12,6 +12,9 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import "react-responsive-modal/styles.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const headingFont = Geist({
   variable: "--font-heading",
@@ -35,8 +38,9 @@ const titleFont = Roboto_Slab({
 });
 
 export const metadata = {
-  title: `App Developer | ${NAME}`,
-  description: "Full-stack developer from the outskirts of Mumbai",
+  title: `Software Engineer | ${NAME}`,
+  description:
+    "Senior full-stack developer crafting end-to-end web applications with purpose. I believe great technology makes life better—driven by curiosity and learning.",
   icons: {
     icon: [
       { url: "/favicon.png", sizes: "32x32", type: "image/png" },

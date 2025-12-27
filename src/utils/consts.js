@@ -33,6 +33,13 @@ export const NAME = "Monu Chouhan";
 export const NAME_SHORT = "Monu";
 export const EMAIL = "chouhan.monu07@gmail.com";
 
+export const SOCIAL_LINKS = {
+  linkedIn: "https://www.linkedin.com/in/monu-chouhan-5887991b3/",
+  twitter: "https://x.com/_monu_chouhan",
+  instagram: "https://www.instagram.com/__monu__chouhan____/",
+  discord: "https://discord.com/users/monuchouhan_58246",
+};
+
 export const CONTACT_PAGE = {
   label: "Contact",
   href: "/contact",

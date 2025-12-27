@@ -5,7 +5,7 @@ import InstagramIcon from "@/assets/icons/InstagramIcon";
 import TwitterIcon from "@/assets/icons/TwitterIcon";
 import classNames from "classnames";
 import { getSectionClasses } from "@/utils/helpers";
-import { EMAIL, MAIN_NAV } from "@/utils/consts";
+import { EMAIL, MAIN_NAV, SOCIAL_LINKS } from "@/utils/consts";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import DiscordIcon from "@/assets/icons/DiscordIcon";
 import LinkedInIcon from "@/assets/icons/LinkedInIcon";
@@ -21,17 +21,17 @@ export default function Footer() {
           <div className="flex flex-col">
             <Logo />
             <div className="flex items-center gap-3 mt-4">
-              <Link href="#">
-                <InstagramIcon className="w-5 text-gray-400 hover:text-gray-800 transition-colors" />
+              <Link href={SOCIAL_LINKS.instagram}>
+                <InstagramIcon className="w-5 text-gray-400" />
               </Link>
-              <Link href="#">
-                <LinkedInIcon className="w-6 text-gray-400 hover:text-gray-800 transition-colors" />
+              <Link href={SOCIAL_LINKS.linkedIn}>
+                <LinkedInIcon className="w-6 text-gray-400" />
               </Link>
-              <Link href="#">
-                <DiscordIcon className="w-5 text-gray-400 hover:text-gray-800 transition-colors" />
+              <Link href={SOCIAL_LINKS.discord}>
+                <DiscordIcon className="w-5 text-gray-400" />
               </Link>
-              <Link href="#">
-                <TwitterIcon className="w-4.5 text-gray-400 hover:text-gray-800 transition-colors" />
+              <Link href={SOCIAL_LINKS.twitter}>
+                <TwitterIcon className="w-4.5 text-gray-400" />
               </Link>
             </div>
             <div className="mt-12 text-sm text-gray-400">
@@ -43,7 +43,7 @@ export default function Footer() {
             <div className="flex gap-1 items-center justify-center self-start mt-2 text-gray-400">
               <EnvelopeIcon width={20} />
               <Link
-                className="text-sm leading-relaxed hover:text-gray-900 transition-colors"
+                className="text-sm leading-relaxed"
                 href={`mailto:${EMAIL}`}
               >
                 {EMAIL}
@@ -55,10 +55,7 @@ export default function Footer() {
             <ul className="text-sm mt-2 leading-relaxed text-gray-400">
               {MAIN_NAV.map((link, i) => (
                 <li key={i}>
-                  <Link
-                    className="hover:text-gray-900 transition-colors"
-                    href={link.href}
-                  >
+                  <Link className="" href={link.href}>
                     {link.label}
                   </Link>
                 </li>
