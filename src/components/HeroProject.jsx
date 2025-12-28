@@ -18,13 +18,20 @@ export default function HeroProject({ project, stopAutoPlay }) {
   );
 
   const onModalClose = () => setIsModalOpen(false);
+  const onModalOpen = () => {
+    stopAutoPlay();
+    setIsModalOpen(true);
+  };
 
   return (
     <>
       <div className="border border-gray-700 rounded-md p-4">
         <div className="flex gap-6">
           <div className="basis-1/2 space-y-6">
-            <div className="aspect-video rounded-md overflow-hidden relative">
+            <div
+              onClick={onModalOpen}
+              className="aspect-video rounded-md overflow-hidden relative hover:cursor-pointer"
+            >
               <Image
                 fill
                 src={imageUrl}
@@ -71,11 +78,8 @@ export default function HeroProject({ project, stopAutoPlay }) {
         <div className="basis-full mt-6">
           <div
             tabIndex={0}
-            className="inline-block underline underline-offset-4 text-gray-400 cursor-pointer hover:cursor-pointer"
-            onClick={() => {
-              stopAutoPlay();
-              setIsModalOpen(true);
-            }}
+            className="inline-block underline underline-offset-4 text-gray-400 cursor-pointer hover:cursor-pointer transition-colors hover:text-primary-500"
+            onClick={onModalOpen}
           >
             <span>View details</span>
           </div>

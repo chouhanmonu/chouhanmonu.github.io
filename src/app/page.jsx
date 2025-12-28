@@ -14,7 +14,7 @@ export default function Home() {
         <HeroProjectsSlider />
         <div className="mt-4 text-center">
           <Link
-            className="inline-block px-4 py-2 pr-0 underline underline-offset-4 text-gray-400 cursor-pointer hover:cursor-pointer"
+            className="inline-block px-4 py-2 pr-0 underline underline-offset-4 text-gray-400 cursor-pointer hover:cursor-pointer transition-colors hover:text-primary-500"
             href="/projects"
           >
             <span>View All Projects</span>

@@ -29,7 +29,10 @@ export default function ContactPage() {
                 <span>Email:</span>
               </div>
               <div>
-                <a className="text-gray-400" href={`mailto:${EMAIL}`}>
+                <a
+                  className="text-gray-400 transition-colors hover:text-primary-500"
+                  href={`mailto:${EMAIL}`}
+                >
                   {EMAIL}
                 </a>
               </div>

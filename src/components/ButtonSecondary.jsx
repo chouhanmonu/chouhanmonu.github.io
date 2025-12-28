@@ -11,7 +11,7 @@ export default function ButtonSecondary({
     <button
       onClick={onClick}
       className={classNames(
-        "flex gap-2 items-center justify-center bg-gray-500 rounded-md py-2.5 px-4 hover:cursor-pointer",
+        "flex gap-2 items-center justify-center bg-gray-500 rounded-md py-2.5 px-4 hover:cursor-pointer transition-colors hover:bg-gray-600",
         className
       )}
       disabled={disabled}

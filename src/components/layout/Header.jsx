@@ -22,7 +22,11 @@ export default function Header() {
           <nav aria-label="Main">
             <ul className="flex gap-4 items-center">
               {MAIN_NAV.map((link, i) => (
-                <Link href={link.href} key={i}>
+                <Link
+                  className="hover:text-primary-500 transition-colors "
+                  href={link.href}
+                  key={i}
+                >
                   {link.label}
                 </Link>
               ))}
