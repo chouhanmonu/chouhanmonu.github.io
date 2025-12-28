@@ -261,7 +261,7 @@ export const REMIX = {
   name: "remix",
   element: (
     <>
-      <RemixIcon className="w-4" />
+      <RemixIcon className="w-4 max-md:w-3" />
       <span {...techTextProps}>Remix</span>
     </>
   ),
@@ -281,7 +281,7 @@ export const TRELLO = {
   name: "trello",
   element: (
     <>
-      <TrelloIcon {...techIconProps} />
+      <TrelloIcon className="w-5 max-md:w-4" />
       <span {...techTextProps}>Trello</span>
     </>
   ),
@@ -291,7 +291,7 @@ export const VERCEL = {
   name: "vercel",
   element: (
     <>
-      <VercelIcon {...techIconProps} />
+      <VercelIcon className="w-5 max-md:w-4" />
       <span {...techTextProps}>Vercel</span>
     </>
   ),
@@ -361,7 +361,7 @@ export const RAZORPAY = {
   name: "razorpay",
   element: (
     <>
-      <RazorpayIcon {...techIconProps} />
+      <RazorpayIcon className="w-5 max-md:w-4" />
       <span {...techTextProps}>Razorpay</span>
     </>
   ),

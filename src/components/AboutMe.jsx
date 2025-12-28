@@ -14,8 +14,8 @@ import { CONTACT_PAGE } from "@/utils/consts";
 
 export default function AboutMe() {
   return (
-    <div className="flex gap-4 justify-between">
-      <div className="flex-[0_0_420px] flex flex-col gap-6">
+    <div className="flex gap-4 justify-between max-md:flex-col-reverse">
+      <div className="basis-[420px] flex flex-col gap-6 max-md:mt-5 max-md:gap-3">
         <p className="font-light text-4xl font-title">Hi! I&apos;m monu</p>
         <p>
           I am a senior full-stack developer from the outskirts of Mumbai. After
@@ -29,7 +29,7 @@ export default function AboutMe() {
           listening to music, learning, and reading!
         </p>
 
-        <div className="flex gap-3 mt-8">
+        <div className="flex gap-3 mt-8 max-md:flex-col max-md:items-start max-md:mt-6">
           <ButtonSecondary
             onClick={() =>
               window.open(
@@ -58,7 +58,7 @@ export default function AboutMe() {
           </ButtonSecondary>
         </div>
 
-        <div className="mt-auto">
+        <div className="mt-auto max-md:mt-4">
           <Link
             className="flex gap-2 underline underline-offset-4 text-gray-400 transition-colors hover:text-primary-500"
             href={CONTACT_PAGE.href}
@@ -68,9 +68,9 @@ export default function AboutMe() {
           </Link>
         </div>
       </div>
-      <div className="flex-[0_0_380px]">
+      <div className="basis-[380px]">
         <Image
-          className="rounded-md"
+          className="rounded-md max-md:mx-auto"
           src="/images/photo.jpeg"
           width={380}
           height={570}

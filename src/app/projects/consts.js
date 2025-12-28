@@ -2,7 +2,7 @@ export const PROJECTS = [
   {
     title: "Torus SSO",
     summary:
-      "A Single Sign-On system that provides secure access across multiple platforms.",
+      "A Go-powered SSO system for secure, federated one-time logins across apps, balancing speed and enterprise-grade security.",
     tags: ["confidential"],
     imageUrl: "/images/torus-sso.webp",
     overview:
@@ -70,7 +70,7 @@ export const PROJECTS = [
   {
     title: "Split Payments",
     summary:
-      "An intuitive app that streamlines splitting and tracking shared expenses among friends.",
+      "Ad-free app for easy group expense splitting/tracking, with OAuth login, ID invites, and smart algorithms for beating clunky rivals.",
     imageUrl: "/images/split-payments.webp",
     tags: ["work-in-progress"],
     gitHub: {

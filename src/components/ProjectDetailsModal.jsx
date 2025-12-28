@@ -51,13 +51,13 @@ export default function ProjectDetailsModal({ project, onClose }) {
   const parsedTags = tags && JSON.parse(JSON.stringify(tags));
 
   return (
-    <>
+    <div className="h-[calc(100dvh-80px)] overflow-y-auto">
       <div className="sticky top-0 left-0 p-5 bg-black/85 backdrop-blur-sm border-b border-gray-700">
         <div>
           <div className="text-2xl tracking-tight leading-10 font-heading font-medium group-hover:text-primary-500 transition-colors flex gap-4 items-center">
             <div>{title}</div>
             {!!parsedTags?.length && (
-              <div className="flex gap-2">
+              <div className="flex gap-2 max-md:hidden">
                 {parsedTags.map((tag, i) => (
                   <Fragment key={i}>{mapTagToEl(tag, false)}</Fragment>
                 ))}
@@ -74,7 +74,7 @@ export default function ProjectDetailsModal({ project, onClose }) {
           </Button>
         </div>
       </div>
-      <div className="p-5 space-y-10">
+      <div className="p-5 space-y-10 max-md:max-h-[400px]">
         <div className="aspect-video rounded-md overflow-hidden relative">
           <Image
             fill
@@ -167,7 +167,7 @@ export default function ProjectDetailsModal({ project, onClose }) {
         )}
 
         {(websiteLink || gitHub) && (
-          <div className="flex gap-3 items-start">
+          <div className="flex gap-3 items-start max-md:flex-col">
             {websiteLink && (
               <Btn
                 onClick={() =>
@@ -200,6 +200,6 @@ export default function ProjectDetailsModal({ project, onClose }) {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }

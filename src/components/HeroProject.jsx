@@ -27,7 +27,7 @@ export default function HeroProject({ project, stopAutoPlay }) {
     <>
       <div className="border border-gray-700 rounded-md p-4">
         <div className="flex gap-6">
-          <div className="basis-1/2 space-y-6">
+          <div className="basis-1/2 space-y-6 max-lg:basis-full">
             <div
               onClick={onModalOpen}
               className="aspect-video rounded-md overflow-hidden relative hover:cursor-pointer"
@@ -43,12 +43,12 @@ export default function HeroProject({ project, stopAutoPlay }) {
                 className="-z-1"
               />
             </div>
-            <div className="min-h-60">
+            <div className="min-h-60 max-md:min-h-40">
               <div className="text-2xl tracking-tight leading-10 font-heading font-medium group-hover:text-primary-500 transition-colors flex gap-4 items-center">
                 <div>{title}</div>
               </div>
               <div className="text-gray-400">{summary}</div>
-              <ul className="flex gap-3 flex-wrap mt-4">
+              <ul className="flex gap-3 flex-wrap mt-4 max-md:hidden">
                 {techStack.slice(0, 5).map((tech, i) => (
                   <li
                     key={i}
@@ -61,7 +61,7 @@ export default function HeroProject({ project, stopAutoPlay }) {
               </ul>
             </div>
           </div>
-          <div className="basis-1/2 space-y-6">
+          <div className="basis-1/2 space-y-6 max-lg:hidden">
             <div className="space-y-3">
               <div className="text-xl font-medium">Project Overview</div>
               <div className="text-gray-400">{overview}</div>
@@ -75,7 +75,7 @@ export default function HeroProject({ project, stopAutoPlay }) {
             </div>
           </div>
         </div>
-        <div className="basis-full mt-6">
+        <div className="basis-full mt-6 max-md:hidden">
           <div
             tabIndex={0}
             className="inline-block underline underline-offset-4 text-gray-400 cursor-pointer hover:cursor-pointer transition-colors hover:text-primary-500"
@@ -89,7 +89,7 @@ export default function HeroProject({ project, stopAutoPlay }) {
         classNames={{
           overlay: "bg-black/80! backdrop-blur-sm",
           modal:
-            "bg-gray-950! max-w-[880px]! my-10! h-[calc(100dvh-80px)] border border-gray-700 rounded-md p-0!",
+            "bg-gray-950! max-w-[880px]! my-10! p-0! border border-gray-700 rounded-md",
         }}
         open={isModalOpen}
         onClose={() => setIsModalOpen(false)}

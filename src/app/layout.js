@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
       <PrimeReactProvider>
         <body
           className={classNames(
-            "text-gray-100 bg-gray-950",
+            "text-gray-100 bg-gray-950 max-md:text-sm",
             headingFont.variable,
             bodyFont.variable,
             titleFont.variable,
@@ -65,7 +65,7 @@ export default function RootLayout({ children }) {
           <Header />
           <main
             id="MainContent"
-            className="page-main-content pt-18 pb-32 space-y-20"
+            className="page-main-content pt-18 pb-32 space-y-20 max-2xl:pt-10 max-md:pb-20"
           >
             {children}
           </main>

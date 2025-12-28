@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Logo() {
   return (
-    <Link href="/" className="font-light text-4xl font-title">
+    <Link href="/" className="font-light text-4xl font-title max-md:text-2xl">
       {NAME_SHORT.toLowerCase()}.
     </Link>
   );

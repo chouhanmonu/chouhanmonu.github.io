@@ -5,7 +5,7 @@ export default function SectionTitle({ className, children }) {
   return (
     <div
       className={classNames(
-        "font-heading tracking-tight  text-3xl font-semibold leading-12",
+        "font-heading tracking-tight  text-3xl font-semibold leading-12 max-lg:text-2xl",
         className
       )}
     >

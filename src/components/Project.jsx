@@ -37,13 +37,13 @@ export default function Project({ project }) {
             style={{ objectFit: "cover", objectPosition: "center" }}
           />
         </div>
-        <div>
+        <div className="max-md:mb-0">
           <div className="text-2xl tracking-tight leading-10 font-heading font-medium group-hover:text-primary-500 transition-colors">
             {title}
           </div>
           <div className="text-gray-400">{summary}</div>
         </div>
-        <ul className="flex gap-3 flex-wrap">
+        <ul className="flex gap-3 flex-wrap max-md:hidden">
           {techStack.slice(0, 4).map((tech, i) => (
             <li
               key={i}
@@ -59,7 +59,7 @@ export default function Project({ project }) {
         classNames={{
           overlay: "bg-black/80! backdrop-blur-sm",
           modal:
-            "bg-gray-950! max-w-[880px]! my-10! h-[calc(100dvh-80px)] border border-gray-700 rounded-md p-0!",
+            "bg-gray-950! max-w-[880px]! my-10! p-0! border border-gray-700 rounded-md",
         }}
         open={isModalOpen}
         onClose={() => setIsModalOpen(false)}

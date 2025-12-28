@@ -31,7 +31,6 @@ export default function HeroProjectsSlider() {
       effect="fade"
       fadeEffect={{ crossFade: true }}
       navigation={true}
-      pagination={true}
       speed={400}
       autoplay={{
         delay: 2500,
@@ -43,6 +42,19 @@ export default function HeroProjectsSlider() {
         if (!swiper.autoplay.paused) return;
         setIsAutoPlayStopped(true);
       }}
+      pagination={true}
+      breakpoints={{
+        0: {
+          navigation: {
+            enabled: false,
+          },
+        },
+        768: {
+          navigation: {
+            enabled: true,
+          },
+        },
+      }}
     >
       {PROJECTS.map((project, i) => (
         <SwiperSlide key={i}>
@@ -50,7 +62,7 @@ export default function HeroProjectsSlider() {
         </SwiperSlide>
       ))}
       {!isAutoPlayStopped && (
-        <div className="autoplay-progress">
+        <div className="autoplay-progress max-md:hidden!">
           <svg viewBox="0 0 48 48" ref={progressCircle}>
             <circle cx="24" cy="24" r="20"></circle>
           </svg>

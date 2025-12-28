@@ -20,10 +20,10 @@ export default function Header() {
         <Logo />
         <div className="flex gap-5 items-center">
           <nav aria-label="Main">
-            <ul className="flex gap-4 items-center">
+            <ul className="flex gap-4 items-center max-md:gap-3">
               {MAIN_NAV.map((link, i) => (
                 <Link
-                  className="hover:text-primary-500 transition-colors "
+                  className="hover:text-primary-500 transition-colors max-md:first:hidden max-md:last:hidden"
                   href={link.href}
                   key={i}
                 >

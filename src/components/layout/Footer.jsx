@@ -14,13 +14,13 @@ export default function Footer() {
   return (
     <footer className="border-t border-gray-700">
       <nav
-        className={classNames("pt-16 pb-24", getSectionClasses())}
+        className={classNames("pt-16 pb-24 max-md:py-8", getSectionClasses())}
         aria-label="Main"
       >
-        <div className="flex gap-12 justify-between">
+        <div className="flex gap-12 justify-between max-md:gap-6 max-md:flex-col-reverse">
           <div className="flex flex-col">
             <Logo />
-            <div className="flex items-center gap-3 mt-4">
+            <div className="flex items-center gap-3 mt-4 max-md:mt-2">
               <Link
                 className="text-gray-400 transition-colors hover:text-primary-500"
                 href={SOCIAL_LINKS.instagram}
@@ -46,13 +46,13 @@ export default function Footer() {
                 <TwitterIcon className="w-4.5" />
               </Link>
             </div>
-            <div className="mt-12 text-sm text-gray-400">
+            <div className="mt-12 text-sm text-gray-400 max-md:mt-2">
               &copy; {new Date().getFullYear()}
             </div>
           </div>
-          <div className="ml-auto">
+          <div className="ml-auto max-md:ml-0">
             <div className="text-[15px] font-medium">Email me!</div>
-            <div className="flex gap-1 items-center justify-center self-start mt-2 text-gray-400">
+            <div className="flex gap-1 items-center justify-center self-start mt-2 text-gray-400 max-md:justify-start">
               <EnvelopeIcon width={20} />
               <Link
                 className="text-sm leading-relaxed transition-colors hover:text-primary-500"
@@ -81,7 +81,7 @@ export default function Footer() {
       </nav>
       <div className="border-t border-gray-800">
         <div className={getSectionClasses()}>
-          <div className="py-8 text-center text-gray-400 text-sm">
+          <div className="py-8 text-center text-gray-400 text-sm max-md:py-6">
             Crafted with care in India
           </div>
         </div>

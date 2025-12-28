@@ -30,8 +30,8 @@ export default function About() {
       </div>
       {/* Facts and figures section */}
       <div className={classNames(getSectionClasses())}>
-        <div className="flex gap-4">
-          <div className="basis-1/4 text-center border border-primary-950 rounded-md flex items-center justify-center flex-col p-5 bg-primary-950/15 gap-3">
+        <div className="flex gap-4 max-md:flex-wrap max-md:justify-center">
+          <div className="basis-1/4 text-center border border-primary-950 rounded-md flex items-center justify-center flex-col p-5 bg-primary-950/15 gap-3 max-md:basis-[47.5%] max-sm:basis-full">
             <div className="rounded-full p-3 bg-primary-950/50 text-primary-200">
               <CubeIcon strokeWidth={2} width={20} />
             </div>
@@ -40,7 +40,7 @@ export default function About() {
             </div>
             <div className="text-gray-300">Technologies</div>
           </div>
-          <div className="basis-1/4 text-center border border-primary-950 rounded-md flex items-center justify-center flex-col p-5 bg-primary-950/15 gap-3">
+          <div className="basis-1/4 text-center border border-primary-950 rounded-md flex items-center justify-center flex-col p-5 bg-primary-950/15 gap-3 max-md:basis-[47.5%] max-sm:basis-full">
             <div className="rounded-full p-3 bg-primary-950/50 text-primary-200">
               <CodeBracketIcon strokeWidth={2} width={20} />
             </div>
@@ -49,7 +49,7 @@ export default function About() {
             </div>
             <div className="text-gray-300">Total Projects</div>
           </div>
-          <div className="basis-1/4 text-center border border-primary-950 rounded-md flex items-center justify-center flex-col p-5 bg-primary-950/15 gap-3">
+          <div className="basis-1/4 text-center border border-primary-950 rounded-md flex items-center justify-center flex-col p-5 bg-primary-950/15 gap-3 max-md:basis-[47.5%] max-sm:basis-full">
             <div className="rounded-full p-3 bg-primary-950/50 text-primary-200">
               <ArrowTrendingUpIcon strokeWidth={2} width={20} />
             </div>
@@ -58,7 +58,7 @@ export default function About() {
             </div>
             <div className="text-gray-300">Years of Experience</div>
           </div>
-          <div className="basis-1/4 text-center border border-primary-950 rounded-md flex items-center justify-center flex-col p-5 bg-primary-950/15 gap-3">
+          <div className="basis-1/4 text-center border border-primary-950 rounded-md flex items-center justify-center flex-col p-5 bg-primary-950/15 gap-3 max-md:basis-[47.5%] max-sm:basis-full">
             <div className="rounded-full p-3 bg-primary-950/50 text-primary-200">
               <BoltIcon strokeWidth={2} width={20} />
             </div>

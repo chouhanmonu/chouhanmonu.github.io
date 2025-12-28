@@ -24,8 +24,8 @@ export default function Home() {
       <div className={getSectionClasses()}>
         <div>
           <SectionTitle>About Me</SectionTitle>
-          <div className="flex gap-4 items-center">
-            <div className="basis-1/2 aspect-square relative">
+          <div className="flex gap-4 items-center max-md:flex-col">
+            <div className="basis-1/2 aspect-square relative max-md:w-full">
               <Image
                 className="w-full -z-1"
                 src="/images/software-engineer-illustration.webp"
@@ -38,10 +38,10 @@ export default function Home() {
               />
             </div>
             <div className="basis-1/2">
-              <div className="font-light text-5xl font-title">
+              <div className="font-light text-5xl font-title max-lg:text-4xl max-md:text-3xl">
                 Hi! I&apos;m monu :)
               </div>
-              <div className="text-2xl mt-4 leading-10">
+              <div className="text-2xl mt-4 leading-10 max-lg:text-xl max-lg:leading-8 max-md:text-base max-md:leading-6 max-md:mt-2">
                 A senior full-stack developer crafting end-to-end web
                 applications with purpose. I believe great technology makes life
                 better—driven by curiosity and learning.
@@ -49,11 +49,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center text-gray-400">
+          <div className="text-center text-gray-400 max-md:mt-8 max-md:text-left">
             Technologies I have experience with:
           </div>
-          <div className="mt-8">
-            <ul className="flex gap-4 justify-center flex-wrap">
+          <div className="mt-8 max-md:mt-4">
+            <ul className="flex gap-4 justify-center flex-wrap max-md:justify-start">
               {TECHNOLOGIES.map((techPill, i) => (
                 <li
                   key={i}
