@@ -321,3 +321,45 @@ Across 15+ stores, this approach has launched 8 new sites with 100% on-time deli
 
 _GitHub Repo: [Link to repo if available]_  
 _Live Examples: [Client store links if applicable]_
+
+### Teedex
+
+Teedex is a Polotno-powered B2B SaaS tool that empowers sports merch businesses to rapidly generate personalized t-shirt variants with dynamic player names and numbers.
+
+#### Project Overview
+
+Teedex revolutionizes custom apparel production for teams, leagues, and e-commerce sellers by automating the creation of scalable t-shirt designs—eliminating manual editing for hundreds of variants. Acquired mid-development with legacy issues, this platform was overhauled for speed, usability, and extensibility, featuring Excel-driven bulk inputs to cut production time by 80% while ensuring pixel-perfect outputs.
+
+#### Key Features
+
+- **4-Step Workflow**: Upload base t-shirt design; select fonts for player names/numbers; import details via Excel; generate and download high-res variants in batches.
+- **User-Friendly Interface**: A simple, concise, and highly intuitive UI with drag-and-drop design tweaks, ensuring effortless and comfortable extended sessions for all users.
+- **Easy Design Creation**: Vast library of adaptable components (e.g., text layers, shapes) powered by Polotno for quick, creative customization.
+- **Intelligent Font Matching**: Access an expansive selection of adaptable fonts to fuel creativity in personalizing player names and numbers, with easy previews for seamless design integration.
+- **Efficient Data Management**: Seamless Excel integration for bulk player data entry, with validation to ensure accuracy and minimize errors.
+
+#### Technologies & Implementation
+
+Backend leverages Express for API orchestration, MySQL (via Sequelize) for user/design storage, and Canvas for image processing, integrated with Razorpay for payment/subscriptions and Passport for secure auth (including Google OAuth). AWS services handle scalability—Lambda for metadata tagging on rendered images, S3 for asset storage, and App Runner for environment-specific CI/CD deployments (prod/staging). Frontend uses React with Redux Toolkit for stateful UIs, Polotno SDK for canvas editing, and its cloud API for serverless rendering; deployed via AWS Amplify for multi-env support.
+
+**Tech Stack**:
+
+- **Backend**: Express.js, MySQL (Sequelize), Canvas/Sharp/Jimp (image manipulation), Passport (auth), Razorpay (payments), Multer-S3 (uploads), Nodemailer (emails), ExcelJS (data import)
+- **Frontend**: React, Redux Toolkit, Polotno SDK/Cloud API, Fabric.js (canvas extensions), React Hook Form
+- **DevOps & Deployment**: AWS Lambda (metadata processing), S3 (storage), App Runner (backend deployments), AWS Amplify (frontend deployments)
+- **Additional Tools**: JWT/Bcrypt (security), Joi (validation), Node-Cron (scheduling), GitHub Actions (CI/CD integration)
+
+#### My Role & Contributions
+
+As lead full-stack developer on the turnaround team, I collaborated daily with clients to triage issues and roadmap enhancements, transforming a buggy prototype into a robust MVP:
+
+- **Codebase Refactor & Fixes**: Diagnosed and resolved UI glitches (e.g., design tab lag) and performance bottlenecks (e.g., 3x faster thumbnails rendering and 2x faster zip generation); restructured modules for modularity, slashing future dev time by 60%.
+- **Feature Delivery & Testing**: Implemented core workflows like Excel parsing and font previews, with end-to-end testing before automated deployments via AWS Amplify/App Runner pipelines.
+- **Stakeholder & Community Engagement**: Facilitated client demos for feedback-driven iterations (e.g., auto-text resize rollout); engaged Polotno forums to advocate for native image metadata support (e.g., 300 DPI resolution) in Cloud Render API outputs, eliminating AWS Lambda post-processing and speeding up ZIP exports—securing custom SDK fixes that enhanced overall rendering efficiency.
+
+#### Outcomes & Impact
+
+Post-refactor, Teedex achieved 99% uptime and sub-10s variant generation (vs. hours manually), enabling beta users to fulfill orders 4x faster—directly boosting throughput for sports merch businesses. The modular architecture now supports expansions like AI design suggestions, underscoring my expertise in legacy rescues, client-aligned refactoring, and AWS-orchestrated SaaS scaling.
+
+_GitHub Repo: [Link to repo if available]_  
+_Live Demo: https://www.teedex.in/_

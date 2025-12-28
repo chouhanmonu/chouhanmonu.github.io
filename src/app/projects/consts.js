@@ -172,6 +172,114 @@ export const PROJECTS = [
     },
   },
   {
+    title: "Teedex",
+    summary:
+      "Teedex is a Polotno-powered B2B SaaS tool that empowers sports merch businesses to rapidly generate personalized t-shirt variants with dynamic player names and numbers.",
+    overview:
+      "Teedex revolutionizes custom apparel production for teams, leagues, and e-commerce sellers by automating the creation of scalable t-shirt designs—eliminating manual editing for hundreds of variants. Acquired mid-development with legacy issues, this platform was overhauled for speed, usability, and extensibility, featuring Excel-driven bulk inputs to cut production time by 80% while ensuring pixel-perfect outputs.",
+    keyFeatures: [
+      {
+        label: "4-Step Workflow",
+        description:
+          "Upload base t-shirt design; select fonts for player names/numbers; import details via Excel; generate and download high-res variants in batches.",
+      },
+      {
+        label: "User-Friendly Interface",
+        description:
+          "A simple, concise, and highly intuitive UI with drag-and-drop design tweaks, ensuring effortless and comfortable extended sessions for all users.",
+      },
+      {
+        label: "Easy Design Creation",
+        description:
+          "Vast library of adaptable components (e.g., text layers, shapes) powered by Polotno for quick, creative customization.",
+      },
+      {
+        label: "Intelligent Font Matching",
+        description:
+          "Access an expansive selection of adaptable fonts to fuel creativity in personalizing player names and numbers, with easy previews for seamless design integration.",
+      },
+      {
+        label: "Efficient Data Management",
+        description:
+          "Seamless Excel integration for bulk player data entry, with validation to ensure accuracy and minimize errors.",
+      },
+    ],
+    technologies: {
+      description:
+        "Backend leverages Express for API orchestration, MySQL (via Sequelize) for user/design storage, and Canvas for image processing, integrated with Razorpay for payment/subscriptions and Passport for secure auth (including Google OAuth). AWS services handle scalability—Lambda for metadata tagging on rendered images, S3 for asset storage, and App Runner for environment-specific CI/CD deployments (prod/staging). Frontend uses React with Redux Toolkit for stateful UIs, Polotno SDK for canvas editing, and its cloud API for serverless rendering; deployed via AWS Amplify for multi-env support.",
+      stacks: [
+        {
+          category: "Backend",
+          technologies: [
+            "Express.js",
+            "MySQL (Sequelize)",
+            "Canvas/Sharp/Jimp (image manipulation)",
+            "Passport (auth)",
+            "Razorpay (payments)",
+            "Multer-S3 (uploads)",
+            "Nodemailer (emails)",
+            "ExcelJS (data import)",
+          ],
+        },
+        {
+          category: "Frontend",
+          technologies: [
+            "React",
+            "Redux Toolkit",
+            "Polotno SDK & Cloud API",
+            "Fabric.js (canvas extensions)",
+            "React Hook Form",
+          ],
+        },
+        {
+          category: "DevOps & Deployment",
+          technologies: [
+            "AWS Lambda (metadata processing)",
+            "S3 (storage)",
+            "App Runner (backend deployments)",
+            "AWS Amplify (frontend deployments)",
+          ],
+        },
+        {
+          category: "Additional Tools",
+          technologies: [
+            "JWT/Bcrypt (security)",
+            "Joi (validation)",
+            "Node-Cron (scheduling)",
+            "GitHub Actions (CI/CD integration)",
+          ],
+        },
+      ],
+      list: ["Express.js", "MySQL", "Razorpay", "React", "AWS", "GitHub"],
+    },
+    role: {
+      summary:
+        "As lead full-stack developer on the turnaround team, I collaborated daily with clients to triage issues and roadmap enhancements, transforming a buggy prototype into a robust MVP:",
+      contributions: [
+        {
+          label: "Codebase Refactor & Fixes",
+          description:
+            "Diagnosed and resolved UI glitches (e.g., design tab lag) and performance bottlenecks (e.g., 3x faster thumbnails rendering and 2x faster zip generation); restructured modules for modularity, slashing future dev time by 60%.",
+        },
+        {
+          label: "Feature Delivery & Testing",
+          description:
+            "Implemented core workflows like Excel parsing and font previews, with end-to-end testing before automated deployments via AWS Amplify/App Runner pipelines.",
+        },
+        {
+          label: "Stakeholder & Community Engagement",
+          description:
+            "Facilitated client demos for feedback-driven iterations (e.g., auto-text resize rollout); engaged Polotno forums to advocate for native image metadata support (e.g., 300 DPI resolution) in Cloud Render API outputs, eliminating AWS Lambda post-processing and speeding up ZIP exports—securing custom SDK fixes that enhanced overall rendering efficiency.",
+        },
+      ],
+    },
+    outcomes:
+      "Post-refactor, Teedex achieved 99% uptime and sub-10s variant generation (vs. hours manually), enabling beta users to fulfill orders 4x faster—directly boosting throughput for sports merch businesses. The modular architecture now supports expansions like AI design suggestions, underscoring my expertise in legacy rescues, client-aligned refactoring, and AWS-orchestrated SaaS scaling.",
+    imageUrl: "/images/teedex.webp",
+    websiteLink: "https://www.teedex.in/",
+    tags: ["ongoing"],
+  },
+  {
     title: "Chat",
     summary:
       "An open-source, end-to-end encrypted real-time chat and notes platform designed for scalability, customization, and collaboration.",

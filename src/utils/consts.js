@@ -27,6 +27,7 @@ import SocketIoIcon from "@/assets/icons/SocketIoIcon";
 import SupabaseIcon from "@/assets/icons/SupabaseIcon";
 import RocketChatIcon from "@/assets/icons/RocketChatIcon";
 import RemixIcon from "@/assets/icons/RemixIcon";
+import RazorpayIcon from "@/assets/icons/RazorpayIcon";
 
 // app
 export const NAME = "Monu Chouhan";
@@ -356,6 +357,16 @@ export const ROCKETCHAT = {
   ),
 };
 
+export const RAZORPAY = {
+  name: "razorpay",
+  element: (
+    <>
+      <RazorpayIcon {...techIconProps} />
+      <span {...techTextProps}>Razorpay</span>
+    </>
+  ),
+};
+
 export const TECHNOLOGIES = [
   HTML,
   CSS,
@@ -378,6 +389,7 @@ export const TECHNOLOGIES = [
   GRAPHQL,
   REDIS,
   SOCKETIO,
+  RAZORPAY,
   SUPABASE,
   ROCKETCHAT,
   SHOPIFY,

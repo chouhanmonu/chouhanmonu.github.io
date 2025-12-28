@@ -28,10 +28,10 @@ export default function Home() {
             <div className="basis-1/2 aspect-square relative">
               <Image
                 className="w-full -z-1"
-                src="/images/software-engineer-illustration.png"
+                src="/images/software-engineer-illustration.webp"
                 quality={100}
-                alt=""
-                sizes="(max-width: 768px) 100vw, 468px"
+                alt="An illustration representing software engineer"
+                sizes="(max-width: 768px) 100vw, 488px"
                 loading="lazy"
                 fill
                 style={{ objectFit: "contain", objectPosition: "center" }}

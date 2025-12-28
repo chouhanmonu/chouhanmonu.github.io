@@ -21,6 +21,8 @@ const mapTagToEl = (tag, isShort = true) => {
       return <Tag color="orange">{isShort ? "CONF" : "Confidential"}</Tag>;
     case "work-in-progress":
       return <Tag color="sky">{isShort ? "WIP" : "Work-in-Progress"}</Tag>;
+    case "ongoing":
+      return <Tag color="amber">{isShort ? "WIP" : "Ongoing"}</Tag>;
     default:
       return <></>;
   }
