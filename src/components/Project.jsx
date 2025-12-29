@@ -7,6 +7,7 @@ import Modal from "react-responsive-modal";
 import { TECHNOLOGIES } from "@/utils/consts";
 import { getTechFromList } from "@/utils/helpers";
 import ProjectDetailsModal from "./ProjectDetailsModal";
+import { motion } from "motion/react";
 
 export default function Project({ project }) {
   const { title, summary, technologies, imageUrl } = project;
@@ -20,9 +21,13 @@ export default function Project({ project }) {
 
   return (
     <>
-      <li
+      <motion.li
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        whileHover={{ scale: 1.025 }}
+        transition={{ duration: 0.1, ease: "easeInOut" }}
         className={classNames(
-          "relative border border-gray-700 rounded p-5 space-y-6 hover:cursor-pointer hover:scale-105 transition-all hover:border-primary-950 hover:bg-primary-950/15 group"
+          "relative border border-gray-700 rounded p-5 space-y-6 hover:cursor-pointer transition-all hover:border-primary-950 hover:bg-primary-950/15 group"
         )}
         tabIndex={0}
         onClick={() => setIsModalOpen(true)}
@@ -54,7 +59,7 @@ export default function Project({ project }) {
           ))}
           {techStack.length > 4 && <li>...</li>}
         </ul>
-      </li>
+      </motion.li>
       <Modal
         classNames={{
           overlay: "bg-black/80! backdrop-blur-sm",

@@ -39,7 +39,7 @@ export default function Home() {
             </div>
             <div className="basis-1/2">
               <div className="font-light text-5xl font-title max-lg:text-4xl max-md:text-3xl">
-                Hi! I&apos;m monu :)
+                <span className="inline-block typing-demo">a simple text</span>
               </div>
               <div className="text-2xl mt-4 leading-10 max-lg:text-xl max-lg:leading-8 max-md:text-base max-md:leading-6 max-md:mt-2">
                 A senior full-stack developer crafting end-to-end web

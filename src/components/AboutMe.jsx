@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { CONTACT_PAGE } from "@/utils/consts";
+import { motion } from "motion/react";
 
 export default function AboutMe() {
   return (
@@ -68,15 +69,21 @@ export default function AboutMe() {
           </Link>
         </div>
       </div>
-      <div className="basis-[380px]">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="basis-[380px] aspect-2/3 relative"
+      >
         <Image
           className="rounded-md max-md:mx-auto"
           src="/images/photo.jpeg"
-          width={380}
-          height={570}
           alt="My photo"
+          fill
+          loading="eager"
+          sizes="(max-width: 768px) 100vw, 380px"
+          style={{ objectFit: "contain", objectPosition: "center" }}
         />
-      </div>
+      </motion.div>
     </div>
   );
 }
