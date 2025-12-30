@@ -211,12 +211,28 @@ header {
 
 /* animation */
 
-.typing-demo {
-  width: 8ch;
-  animation: typing 4s steps(8), blink 0.5s step-end infinite alternate;
+.about-intro-animate {
+  width: 15ch;
+  animation: typing 1.8s steps(15), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid;
+  border-right: 2px solid;
+}
+
+.logo-animate {
+  width: 3ch;
+  animation: deleting 700ms steps(3) forwards;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes deleting {
+  from {
+    width: 3ch;
+  }
+  to {
+    width: 0;
+  }
 }
 
 @keyframes typing {

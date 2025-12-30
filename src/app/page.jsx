@@ -1,3 +1,4 @@
+import AboutMeBrief from "@/components/AboutMeBrief";
 import ButtonSecondary from "@/components/ButtonSecondary";
 import Contact from "@/components/Contact";
 import HeroProjectsSlider from "@/components/HeroProjectsSlider";
@@ -38,14 +39,7 @@ export default function Home() {
               />
             </div>
             <div className="basis-1/2">
-              <div className="font-light text-5xl font-title max-lg:text-4xl max-md:text-3xl">
-                <span className="inline-block typing-demo">a simple text</span>
-              </div>
-              <div className="text-2xl mt-4 leading-10 max-lg:text-xl max-lg:leading-8 max-md:text-base max-md:leading-6 max-md:mt-2">
-                A senior full-stack developer crafting end-to-end web
-                applications with purpose. I believe great technology makes life
-                better—driven by curiosity and learning.
-              </div>
+              <AboutMeBrief />
             </div>
           </div>
 
