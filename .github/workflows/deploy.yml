@@ -34,7 +34,7 @@ jobs:
         run: npm run build    # This runs next build && next export (due to output: 'export')
 
       - name: Create .nojekyll
-        run: touch out/.nojekyll
+        run: touch ./out/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
