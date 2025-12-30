@@ -7,7 +7,6 @@ import { useState } from "react";
 export default function AboutMeBrief() {
   const [isAnimtionEnded, setIsAnimtionEnded] = useState(false);
   const [elObserverRef, isElIntersecting] = useIsIntersecting();
-  console.log("intersection: ", isElIntersecting);
 
   return (
     <>

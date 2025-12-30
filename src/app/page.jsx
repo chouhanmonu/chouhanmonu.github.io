@@ -1,5 +1,4 @@
 import AboutMeBrief from "@/components/AboutMeBrief";
-import ButtonSecondary from "@/components/ButtonSecondary";
 import Contact from "@/components/Contact";
 import HeroProjectsSlider from "@/components/HeroProjectsSlider";
 import SectionTitle from "@/components/SectionTitle";

@@ -1,12 +1,18 @@
+"use client";
+
 import ButtonSecondary from "@/components/ButtonSecondary";
 import SectionSubtitle from "@/components/SectionSubtitle";
 import SectionTitle from "@/components/SectionTitle";
 import { ArrowRightIcon, PaperAirplaneIcon } from "@heroicons/react/24/outline";
-import React from "react";
 import Link from "next/link";
 import { JSX_SOCIAL_LINKS } from "@/app/contact/consts";
+import { contactFormAction } from "@/lib/actions";
+import { useActionState, useState } from "react";
 
 export default function Contact() {
+  const [state, action, pending] = useActionState(contactFormAction, null);
+  const [messageLength, setMessageLength] = useState(0);
+
   return (
     <>
       <div>
@@ -16,7 +22,10 @@ export default function Contact() {
           and I&apos;ll get back to you in a day
         </SectionSubtitle>
       </div>
-      <form className="border border-gray-700 rounded-md p-4 bg-gray-900/50 space-y-4">
+      <form
+        action={action}
+        className="border border-gray-700 rounded-md p-4 bg-gray-900/50 space-y-4"
+      >
         <div className="flex gap-4">
           <label className="basis-1/2">
             <div className="required leading-10">Name</div>
@@ -32,7 +41,7 @@ export default function Contact() {
           <label className="basis-1/2">
             <div className="required leading-10">Email</div>
             <input
-              type="text"
+              type="email"
               name="email"
               autoComplete="email"
               placeholder="john@gmail.com"
@@ -46,23 +55,31 @@ export default function Contact() {
             <label className="required leading-10" htmlFor="inputMessage">
               Message
             </label>
-            <div className="text-gray-400 text-sm">0/512 characters</div>
+            <div className="text-gray-400 text-sm">
+              {messageLength}/512 characters
+            </div>
           </div>
           <textarea
             name="message"
             placeholder="Enter message"
             className="border border-gray-700 rounded-md px-2 py-1.5 w-full placeholder:text-gray-400!"
             rows={4}
-            maxLength={4}
+            maxLength={512}
             required
+            onChange={(e) => setMessageLength(e.target.value.length)}
             id="inputMessage"
           ></textarea>
         </div>
         <div>
-          <ButtonSecondary>
-            <span>Send</span>
+          <ButtonSecondary disabled={pending}>
+            <span>{!pending ? "Send" : "Sending ..."}</span>
             <PaperAirplaneIcon className="w-5 transform -rotate-12" />
           </ButtonSecondary>
+          {state?.success && (
+            <div className="mt-2 text-green-600 text-xs leading-3.5">
+              Message sent successfully!
+            </div>
+          )}
         </div>
       </form>
 
