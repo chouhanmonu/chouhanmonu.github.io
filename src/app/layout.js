@@ -70,6 +70,11 @@ export default function RootLayout({ children }) {
             {children}
           </main>
           <Footer />
+          <script
+            src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+            async
+            defer
+          ></script>
         </body>
       </PrimeReactProvider>
     </html>

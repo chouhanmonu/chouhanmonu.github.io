@@ -6,16 +6,21 @@ import SectionTitle from "@/components/SectionTitle";
 import { ArrowRightIcon, PaperAirplaneIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { JSX_SOCIAL_LINKS } from "@/app/contact/consts";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Contact() {
   const [messageLength, setMessageLength] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
+  const turnstileToken = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!turnstileToken.current) {
+      alert("Verification failed. Please retry.");
+      return;
+    }
 
     try {
       setLoading(true);
@@ -40,6 +45,7 @@ export default function Contact() {
           email,
           message,
           subject,
+          turnstileToken: turnstileToken.current,
         }),
       });
 
@@ -49,12 +55,23 @@ export default function Contact() {
       e.target.reset();
       setMessageLength(0);
       setSuccess(true);
+      turnstileToken.current = null;
+      turnstile.reset();
     } catch (error) {
       setError(error.message);
     } finally {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    const widgetId = turnstile.render("#turnstile-container", {
+      sitekey: "0x4AAAAAACJ4j6mGWsUP5S23",
+      callback: function (token) {
+        turnstileToken.current = token;
+      },
+    });
+  }, []);
 
   return (
     <>
@@ -134,6 +151,11 @@ export default function Contact() {
             <div className="mt-2 text-red-600 text-xs leading-3.5">{error}</div>
           )}
         </div>
+        <div
+          data-theme="dark"
+          data-size="normal"
+          id="turnstile-container"
+        ></div>
       </form>
 
       <div>
