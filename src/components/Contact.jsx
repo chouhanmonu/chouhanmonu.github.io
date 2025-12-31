@@ -6,12 +6,55 @@ import SectionTitle from "@/components/SectionTitle";
 import { ArrowRightIcon, PaperAirplaneIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { JSX_SOCIAL_LINKS } from "@/app/contact/consts";
-import { contactFormAction } from "@/lib/actions";
-import { useActionState, useState } from "react";
+import { useState } from "react";
 
 export default function Contact() {
-  const [state, action, pending] = useActionState(contactFormAction, null);
   const [messageLength, setMessageLength] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      setLoading(true);
+      setSuccess(false);
+      setError("");
+
+      const formData = new FormData(e.target);
+      const { name, email, message, subject } = Object.fromEntries(
+        formData.entries()
+      );
+      if (!name || !email || !message) throw new Error("Bad request");
+
+      const myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+
+      const res = await fetch("https://send-mail-chi.vercel.app/api/sendMail", {
+        // const res = await fetch("http://localhost:3001/api/sendMail", {
+        method: "POST",
+        headers: myHeaders,
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+          subject,
+        }),
+      });
+
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+
+      e.target.reset();
+      setMessageLength(0);
+      setSuccess(true);
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
@@ -23,9 +66,10 @@ export default function Contact() {
         </SectionSubtitle>
       </div>
       <form
-        action={action}
         className="border border-gray-700 rounded-md p-4 bg-gray-900/50 space-y-4"
+        onSubmit={handleSubmit}
       >
+        <input type="text" name="subject" style={{ display: "none" }} />
         <div className="flex gap-4">
           <label className="basis-1/2">
             <div className="required leading-10">Name</div>
@@ -71,14 +115,23 @@ export default function Contact() {
           ></textarea>
         </div>
         <div>
-          <ButtonSecondary disabled={pending}>
-            <span>{!pending ? "Send" : "Sending ..."}</span>
-            <PaperAirplaneIcon className="w-5 transform -rotate-12" />
+          <ButtonSecondary disabled={loading}>
+            {!loading ? (
+              <>
+                <span>Send</span>
+                <PaperAirplaneIcon className="w-5 transform -rotate-12" />
+              </>
+            ) : (
+              <div className="progress-spinner w-6 h-6"> </div>
+            )}
           </ButtonSecondary>
-          {state?.success && (
+          {success && (
             <div className="mt-2 text-green-600 text-xs leading-3.5">
               Message sent successfully!
             </div>
+          )}
+          {error && (
+            <div className="mt-2 text-red-600 text-xs leading-3.5">{error}</div>
           )}
         </div>
       </form>
