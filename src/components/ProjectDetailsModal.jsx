@@ -52,7 +52,7 @@ export default function ProjectDetailsModal({ project, onClose }) {
 
   return (
     <div className="h-[calc(100dvh-80px)] overflow-y-auto">
-      <div className="sticky top-0 left-0 p-5 bg-black/85 backdrop-blur-sm border-b border-gray-700">
+      <div className="sticky top-0 left-0 p-5 bg-black/85 backdrop-blur-sm border-b border-gray-700 light:bg-white/85">
         <div>
           <div className="text-2xl tracking-tight leading-10 font-heading font-medium group-hover:text-primary-500 transition-colors flex gap-4 items-center">
             <div>{title}</div>
@@ -64,13 +64,18 @@ export default function ProjectDetailsModal({ project, onClose }) {
               </div>
             )}
           </div>
-          <div className="text-gray-400 mt-3">{summary}</div>
+          <div className="text-gray-400 mt-3 light:text-gray-600">
+            {summary}
+          </div>
           <Button
             text
             className="p-2! absolute! top-4 right-4"
             onClick={onClose}
           >
-            <XMarkIcon strokeWidth={3} className="w-5 text-gray-100" />
+            <XMarkIcon
+              strokeWidth={3}
+              className="w-5 text-gray-100 light:text-gray-950"
+            />
           </Button>
         </div>
       </div>
@@ -90,17 +95,17 @@ export default function ProjectDetailsModal({ project, onClose }) {
 
         <div className="space-y-3">
           <div className="text-xl font-medium">Project Overview</div>
-          <div className="text-gray-400">{overview}</div>
+          <div className="text-gray-400 light:text-gray-600">{overview}</div>
         </div>
 
         <div className="space-y-3">
           <div className="text-xl font-medium">Key Features</div>
-          <div className="text-gray-400">
+          <div className="text-gray-400 light:text-gray-600">
             <ul className="space-y-2">
               {keyFeatures.map((feature, i) => (
                 <li key={i}>
                   <p>
-                    <strong className="text-gray-100 font-normal">
+                    <strong className="text-gray-100 font-normal light:text-gray-800 light:font-medium">
                       {feature.label}:
                     </strong>
                     <span> {feature.description}</span>
@@ -115,13 +120,15 @@ export default function ProjectDetailsModal({ project, onClose }) {
           <div className="text-xl font-medium">
             Technologies & Implementation
           </div>
-          <div className="text-gray-400">{technologies.description}</div>
+          <div className="text-gray-400 light:text-gray-600">
+            {technologies.description}
+          </div>
 
           <ul className="space-y-2">
             {technologies.stacks.map((stack, i) => (
-              <li key={i} className="text-gray-400">
+              <li key={i} className="text-gray-400 light:text-gray-600">
                 <p>
-                  <strong className="text-gray-100 font-normal">
+                  <strong className="text-gray-100 font-normal light:text-gray-800 light:font-medium">
                     {stack.category}:
                   </strong>
                   <span> {stack.technologies.join(", ")}</span>
@@ -144,14 +151,16 @@ export default function ProjectDetailsModal({ project, onClose }) {
 
         <div className="space-y-3">
           <div className="text-xl font-medium">My Role & Contributions</div>
-          <div className="text-gray-400">{role.summary}</div>
+          <div className="text-gray-400 light:text-gray-600">
+            {role.summary}
+          </div>
           <ul className="space-y-2">
             {role.contributions.map((contribution, i) => (
-              <li key={i} className="text-gray-400">
+              <li key={i} className="text-gray-400 light:text-gray-600">
                 <p>
-                  <b className="text-gray-100 font-normal">
+                  <strong className="text-gray-100 font-normal light:text-gray-800 light:font-medium">
                     {contribution.label}:
-                  </b>
+                  </strong>
                   <span> {contribution.description}</span>
                 </p>
               </li>
@@ -162,7 +171,7 @@ export default function ProjectDetailsModal({ project, onClose }) {
         {outcomes && (
           <div className="space-y-3">
             <div className="text-xl font-medium">Outcomes & Impact</div>
-            <div className="text-gray-400">{outcomes}</div>
+            <div className="text-gray-400 light:text-gray-600">{outcomes}</div>
           </div>
         )}
 
@@ -191,7 +200,7 @@ export default function ProjectDetailsModal({ project, onClose }) {
                   <ArrowUpRightIcon strokeWidth={2} className="w-4" />
                 </ButtonSecondary>
                 {gitHub.private && (
-                  <small className="text-gray-400 text-xs">
+                  <small className="text-gray-400 text-xs light:text-gray-600">
                     Private — request access
                   </small>
                 )}

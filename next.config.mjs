@@ -6,6 +6,7 @@ const nextConfig = {
     unoptimized: true, // Required: Next.js Image optimization needs a server
   },
   trailingSlash: true, // Helps with routing on GitHub Pages
+  // reactStrictMode: false,
 };
 
 export default nextConfig;

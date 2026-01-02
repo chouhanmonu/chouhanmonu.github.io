@@ -1,16 +1,14 @@
 import React from "react";
 import Logo from "../Logo";
-import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import classNames from "classnames";
 import { getSectionClasses } from "@/utils/helpers";
 import Link from "next/link";
 import { MAIN_NAV } from "@/utils/consts";
-import { MoonIcon } from "@heroicons/react/24/outline";
-import { Button } from "primereact/button";
+import NightModeToggle from "../NightModeToggle";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 left-0 border-b border-gray-700 z-50 bg-gray-950">
+    <header className="sticky top-0 left-0 border-b border-gray-700 z-50 bg-gray-950 light:bg-white">
       <div
         className={classNames(
           "flex justify-between items-center py-2.5",
@@ -18,7 +16,7 @@ export default function Header() {
         )}
       >
         <Logo />
-        <div className="flex gap-5 items-center">
+        <div className="flex gap-8 items-center">
           <nav aria-label="Main">
             <ul className="flex gap-4 items-center max-md:gap-3">
               {MAIN_NAV.map((link, i) => (
@@ -32,6 +30,8 @@ export default function Header() {
               ))}
             </ul>
           </nav>
+
+          <NightModeToggle />
         </div>
       </div>
     </header>

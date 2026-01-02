@@ -47,7 +47,7 @@ export default function HeroProject({ project, stopAutoPlay }) {
               <div className="text-2xl tracking-tight leading-10 font-heading font-medium group-hover:text-primary-500 transition-colors flex gap-4 items-center">
                 <div>{title}</div>
               </div>
-              <div className="text-gray-400">{summary}</div>
+              <div className="text-gray-400 light:text-gray-600">{summary}</div>
               <ul className="flex gap-3 flex-wrap mt-4 max-md:hidden">
                 {techStack.slice(0, 5).map((tech, i) => (
                   <li
@@ -64,12 +64,14 @@ export default function HeroProject({ project, stopAutoPlay }) {
           <div className="basis-1/2 space-y-6 max-lg:hidden">
             <div className="space-y-3">
               <div className="text-xl font-medium">Project Overview</div>
-              <div className="text-gray-400">{overview}</div>
+              <div className="text-gray-400 light:text-gray-600">
+                {overview}
+              </div>
             </div>
 
             <div className="space-y-3">
               <div className="text-xl font-medium">Key Features</div>
-              <div className="text-gray-400">
+              <div className="text-gray-400 light:text-gray-600">
                 {joinArrayWithAnd(keyFeatures.map((feature) => feature.label))}
               </div>
             </div>
@@ -78,7 +80,7 @@ export default function HeroProject({ project, stopAutoPlay }) {
         <div className="basis-full mt-6 max-md:hidden">
           <div
             tabIndex={0}
-            className="inline-block underline underline-offset-4 text-gray-400 cursor-pointer hover:cursor-pointer transition-colors hover:text-primary-500"
+            className="inline-block underline underline-offset-4 text-gray-400 cursor-pointer hover:cursor-pointer transition-colors hover:text-primary-500 light:text-gray-600"
             onClick={onModalOpen}
           >
             <span>View details</span>
@@ -87,9 +89,9 @@ export default function HeroProject({ project, stopAutoPlay }) {
       </div>
       <Modal
         classNames={{
-          overlay: "bg-black/80! backdrop-blur-sm",
+          overlay: "bg-black/80! backdrop-blur-sm light:bg-black/20!",
           modal:
-            "bg-gray-950! max-w-[880px]! my-10! p-0! border border-gray-700 rounded-md",
+            "bg-gray-950! max-w-[880px]! my-10! p-0! border border-gray-700 rounded-md light:bg-white!",
         }}
         open={isModalOpen}
         onClose={() => setIsModalOpen(false)}

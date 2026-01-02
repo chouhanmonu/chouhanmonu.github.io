@@ -14,7 +14,7 @@ export default function Home() {
         <HeroProjectsSlider />
         <div className="mt-4 text-center">
           <Link
-            className="inline-block px-4 py-2 pr-0 underline underline-offset-4 text-gray-400 cursor-pointer hover:cursor-pointer transition-colors hover:text-primary-500"
+            className="inline-block px-4 py-2 pr-0 underline underline-offset-4 text-gray-400 cursor-pointer hover:cursor-pointer transition-colors hover:text-primary-500 light:text-gray-600"
             href="/projects"
           >
             <span>View All Projects</span>
@@ -42,7 +42,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center text-gray-400 max-md:mt-8 max-md:text-left">
+          <div className="text-center text-gray-400 max-md:mt-8 max-md:text-left light:text-gray-600">
             Technologies I have experience with:
           </div>
           <div className="mt-8 max-md:mt-4">
@@ -57,7 +57,7 @@ export default function Home() {
               ))}
             </ul>
             <div className="mt-4">
-              <div className="text-center text-gray-400">
+              <div className="text-center text-gray-400 light:text-gray-600">
                 ... and many more!
               </div>
             </div>

@@ -12,6 +12,8 @@
 }
 /* end */
 
+@variant light (.light &);
+
 @theme {
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
@@ -63,13 +65,26 @@ html {
   scrollbar-color: var(--color-gray-100) var(--color-gray-950); /* thumb track */
 }
 
+html.light {
+  scrollbar-color: var(--color-gray-950) var(--color-gray-200); /* thumb track */
+}
+
 /* WebKit browsers (Chrome, Safari, Edge): Global scrollbar styling */
 *::-webkit-scrollbar-track {
   background: var(--color-gray-950); /* Track background color */
 }
 
+html.light *::-webkit-scrollbar-track {
+  background: var(--color-gray-200); /* Track background color */
+}
+
 *::-webkit-scrollbar-thumb {
   background: var(--color-gray-100); /* Thumb color */
+  border-radius: 50%; /* Thumb border radius */
+}
+
+html.light *::-webkit-scrollbar-thumb {
+  background: var(--color-gray-950); /* Thumb color */
   border-radius: 50%; /* Thumb border radius */
 }
 
@@ -105,6 +120,10 @@ header {
 
 .swiper {
   --swiper-theme-color: var(--color-gray-100);
+}
+
+.light .swiper {
+  --swiper-theme-color: var(--color-gray-950);
 }
 
 .swiper-slide {
@@ -178,7 +197,7 @@ header {
 }
 
 .swiper-pagination-bullet {
-  background: var(--color-gray-100) !important;
+  background: var(--swiper-theme-color) !important;
 }
 
 /* animation */

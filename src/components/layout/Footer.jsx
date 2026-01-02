@@ -22,37 +22,37 @@ export default function Footer() {
             <Logo />
             <div className="flex items-center gap-3 mt-4 max-md:mt-2">
               <Link
-                className="text-gray-400 transition-colors hover:text-primary-500"
+                className="text-gray-400 transition-colors hover:text-primary-500! light:text-gray-600"
                 href={SOCIAL_LINKS.instagram}
               >
                 <InstagramIcon className="w-5" />
               </Link>
               <Link
-                className="text-gray-400 transition-colors hover:text-primary-500"
+                className="text-gray-400 transition-colors hover:text-primary-500! light:text-gray-600"
                 href={SOCIAL_LINKS.linkedIn}
               >
                 <LinkedInIcon className="w-6" />
               </Link>
               <Link
-                className="text-gray-400 transition-colors hover:text-primary-500"
+                className="text-gray-400 transition-colors hover:text-primary-500! light:text-gray-600"
                 href={SOCIAL_LINKS.discord}
               >
                 <DiscordIcon className="w-5" />
               </Link>
               <Link
-                className="text-gray-400 transition-colors hover:text-primary-500"
+                className="text-gray-400 transition-colors hover:text-primary-500! light:text-gray-600"
                 href={SOCIAL_LINKS.twitter}
               >
                 <TwitterIcon className="w-4.5" />
               </Link>
             </div>
-            <div className="mt-12 text-sm text-gray-400 max-md:mt-2">
+            <div className="mt-12 text-sm text-gray-400 max-md:mt-2 light:text-gray-600">
               &copy; {new Date().getFullYear()}
             </div>
           </div>
           <div className="ml-auto max-md:ml-0">
             <div className="text-[15px] font-medium">Email me!</div>
-            <div className="flex gap-1 items-center justify-center self-start mt-2 text-gray-400 max-md:justify-start">
+            <div className="flex gap-1 items-center justify-center self-start mt-2 text-gray-400 max-md:justify-start light:text-gray-600">
               <EnvelopeIcon width={20} />
               <Link
                 className="text-sm leading-relaxed transition-colors hover:text-primary-500"
@@ -68,7 +68,7 @@ export default function Footer() {
               {MAIN_NAV.map((link, i) => (
                 <li key={i}>
                   <Link
-                    className="transition-colors hover:text-primary-500"
+                    className="transition-colors hover:text-primary-500! light:text-gray-600"
                     href={link.href}
                   >
                     {link.label}
@@ -81,7 +81,7 @@ export default function Footer() {
       </nav>
       <div className="border-t border-gray-800">
         <div className={getSectionClasses()}>
-          <div className="py-8 text-center text-gray-400 text-sm max-md:py-6">
+          <div className="py-8 text-center text-gray-400 text-sm max-md:py-6 light:text-gray-600">
             Crafted with care in India
           </div>
         </div>

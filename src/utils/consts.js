@@ -65,7 +65,7 @@ const techIconProps = {
   className: "w-5",
 };
 const techTextProps = {
-  className: "text-gray-400",
+  className: "text-gray-400 light:text-gray-600",
 };
 export const HTML = {
   name: "html",

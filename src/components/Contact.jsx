@@ -7,6 +7,7 @@ import { ArrowRightIcon, PaperAirplaneIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { JSX_SOCIAL_LINKS } from "@/app/contact/consts";
 import { useEffect, useRef, useState } from "react";
+import { useThemeContext } from "@/contexts/ThemeProvider";
 
 export default function Contact() {
   const [messageLength, setMessageLength] = useState(0);
@@ -14,6 +15,8 @@ export default function Contact() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
   const turnstileToken = useRef(null);
+  const { isLightMode, isCurrentStateRead } = useThemeContext();
+  const widgetIdRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -65,13 +68,17 @@ export default function Contact() {
   };
 
   useEffect(() => {
-    const widgetId = turnstile.render("#turnstile-container", {
+    if (!isCurrentStateRead || !turnstile) return;
+
+    if (widgetIdRef.current) turnstile.remove(widgetIdRef.current);
+    widgetIdRef.current = turnstile.render("#turnstile-container", {
       sitekey: "0x4AAAAAACJ4j6mGWsUP5S23",
       callback: function (token) {
         turnstileToken.current = token;
       },
+      theme: isLightMode ? "light" : "dark",
     });
-  }, []);
+  }, [isCurrentStateRead, isLightMode]);
 
   return (
     <>
@@ -83,7 +90,7 @@ export default function Contact() {
         </SectionSubtitle>
       </div>
       <form
-        className="border border-gray-700 rounded-md p-4 bg-gray-900/50 space-y-4"
+        className="border border-gray-700 rounded-md p-4 bg-gray-900/50 space-y-4 light:bg-white"
         onSubmit={handleSubmit}
       >
         <input type="text" name="subject" style={{ display: "none" }} />
@@ -151,11 +158,7 @@ export default function Contact() {
             <div className="mt-2 text-red-600 text-xs leading-3.5">{error}</div>
           )}
         </div>
-        <div
-          data-theme="dark"
-          data-size="normal"
-          id="turnstile-container"
-        ></div>
+        <div data-size="normal" id="turnstile-container"></div>
       </form>
 
       <div>
@@ -165,7 +168,7 @@ export default function Contact() {
             <li key={i}>
               <Link
                 href={link.link || "#"}
-                className="flex gap-2 border py-1 px-2 border-gray-700 rounded-md items-center text-gray-400 transition-colors hover:text-primary-500 hover:border-primary-500"
+                className="flex gap-2 border py-1 px-2 border-gray-700 rounded-md items-center text-gray-400 transition-colors hover:text-primary-500 hover:border-primary-500 light:text-gray-600"
               >
                 {link.icon}
                 {link.label}

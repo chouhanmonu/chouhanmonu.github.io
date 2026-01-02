@@ -3,7 +3,12 @@ import React from "react";
 
 export default function SectionSubtitle({ className, children }) {
   return (
-    <p className={classNames("text-gray-400 tracking-wider", className)}>
+    <p
+      className={classNames(
+        "text-gray-400 tracking-wider light:text-gray-600",
+        className
+      )}
+    >
       {children}
     </p>
   );

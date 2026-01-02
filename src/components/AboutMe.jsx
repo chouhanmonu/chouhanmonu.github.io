@@ -61,7 +61,7 @@ export default function AboutMe() {
 
         <div className="mt-auto max-md:mt-4">
           <Link
-            className="flex gap-2 underline underline-offset-4 text-gray-400 transition-colors hover:text-primary-500"
+            className="flex gap-2 underline underline-offset-4 text-gray-400 transition-colors hover:text-primary-500! light:text-gray-600"
             href={CONTACT_PAGE.href}
           >
             <span>Contact me</span>

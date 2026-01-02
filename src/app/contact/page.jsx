@@ -18,7 +18,7 @@ export default function ContactPage() {
                 <span>Address:</span>
               </div>
               <div>
-                <span className="text-gray-400">
+                <span className="text-gray-400 light:text-gray-600">
                   Virar, Maharashtra, India - 401305
                 </span>
               </div>
@@ -30,7 +30,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <a
-                  className="text-gray-400 transition-colors hover:text-primary-500"
+                  className="text-gray-400 transition-colors hover:text-primary-500! light:text-gray-600"
                   href={`mailto:${EMAIL}`}
                 >
                   {EMAIL}

@@ -46,7 +46,7 @@ export default function Project({ project }) {
           <div className="text-2xl tracking-tight leading-10 font-heading font-medium group-hover:text-primary-500 transition-colors">
             {title}
           </div>
-          <div className="text-gray-400">{summary}</div>
+          <div className="text-gray-400 light:text-gray-600">{summary}</div>
         </div>
         <ul className="flex gap-3 flex-wrap max-md:hidden">
           {techStack.slice(0, 4).map((tech, i) => (
@@ -62,9 +62,9 @@ export default function Project({ project }) {
       </motion.li>
       <Modal
         classNames={{
-          overlay: "bg-black/80! backdrop-blur-sm",
+          overlay: "bg-black/80! backdrop-blur-sm light:bg-white/20!",
           modal:
-            "bg-gray-950! max-w-[880px]! my-10! p-0! border border-gray-700 rounded-md",
+            "bg-gray-950! max-w-[880px]! my-10! p-0! border border-gray-700 rounded-md light:bg-white!",
         }}
         open={isModalOpen}
         onClose={() => setIsModalOpen(false)}

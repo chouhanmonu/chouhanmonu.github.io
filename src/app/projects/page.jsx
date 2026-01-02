@@ -13,7 +13,7 @@ export default function Projects() {
             A small selection of
             <span className="text-primary-500"> Recent Projects</span>
           </div>
-          <p className="text-gray-400 max-w-[62ch] mx-auto max-md:text-left max-md:mt-2">
+          <p className="text-gray-400 max-w-[62ch] mx-auto max-md:text-left max-md:mt-2 light:text-gray-600">
             Here&apos;s a curated list of key projects from my recent work
             experience that I&apos;d like to highlight
           </p>

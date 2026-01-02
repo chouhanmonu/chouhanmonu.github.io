@@ -15,6 +15,8 @@ import "react-responsive-modal/styles.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Script from "next/script";
+import ThemeContextProvider from "@/contexts/ThemeProvider";
 
 const headingFont = Geist({
   variable: "--font-heading",
@@ -51,30 +53,45 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function () {
+              try {
+                const lightMode = matchMedia("(prefers-color-scheme: light)").matches;
+                if (lightMode) document.documentElement.classList.add("light");
+                if (!lightMode) document.documentElement.classList.remove("light");
+              } catch (_) {}
+            })();`,
+          }}
+        ></script>
+      </head>
       <PrimeReactProvider>
         <body
           className={classNames(
-            "text-gray-100 bg-gray-950 max-md:text-sm",
+            "text-gray-100 bg-gray-950 max-md:text-sm light:bg-white light:text-gray-950",
             headingFont.variable,
             bodyFont.variable,
             titleFont.variable,
             bodyFont.className
           )}
         >
-          <Header />
-          <main
-            id="MainContent"
-            className="page-main-content pt-18 pb-32 space-y-20 max-2xl:pt-10 max-md:pb-20"
-          >
-            {children}
-          </main>
-          <Footer />
-          <script
-            src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-            async
-            defer
-          ></script>
+          <ThemeContextProvider>
+            <Header />
+            <main
+              id="MainContent"
+              className="page-main-content pt-18 pb-32 space-y-20 max-2xl:pt-10 max-md:pb-20"
+            >
+              {children}
+            </main>
+            <Footer />
+            <script
+              src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+              async
+              defer
+            ></script>
+          </ThemeContextProvider>
         </body>
       </PrimeReactProvider>
     </html>

@@ -6,7 +6,7 @@ import { EMAIL } from "@/utils/consts";
 
 export default function Connect() {
   return (
-    <div className="border border-primary-950 rounded-md bg-primary-950/15 text-center p-10 space-y-6 max-w-[800px] mx-auto max-md:py-6">
+    <div className="border border-primary-950 rounded-md bg-primary-950/15 text-center p-10 space-y-6 max-w-[800px] mx-auto max-md:py-6 light:bg-primary-50 light:border-primary-700">
       <div className="font-heading text-4xl font-bold leading-12 max-lg:text-3xl max-md:text-2xl max-md:leading-8">
         Wanna Build Something
         <span className="text-primary-500"> Together?</span>
