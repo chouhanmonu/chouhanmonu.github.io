@@ -68,7 +68,7 @@ export default function Contact() {
   };
 
   useEffect(() => {
-    if (!isCurrentStateRead || !turnstile) return;
+    if (!isCurrentStateRead || !window.turnstile) return;
 
     if (widgetIdRef.current) turnstile.remove(widgetIdRef.current);
     widgetIdRef.current = turnstile.render("#turnstile-container", {

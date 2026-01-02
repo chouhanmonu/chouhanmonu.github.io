@@ -10,15 +10,22 @@ export default function ThemeContextProvider({ children }) {
 
   function handleToggleLightMode() {
     setIsLightMode((a) => {
-      if (a) document.documentElement.classList.remove("light");
-      else document.documentElement.classList.add("light");
+      if (a) {
+        document.documentElement.classList.remove("light");
+        sessionStorage.setItem("theme", "dark");
+      } else {
+        document.documentElement.classList.add("light");
+        sessionStorage.setItem("theme", "light");
+      }
 
       return !a;
     });
   }
 
   useEffect(() => {
-    const lightMode = matchMedia("(prefers-color-scheme: light)").matches;
+    const lightMode =
+      sessionStorage.getItem("theme") === "light" ||
+      matchMedia("(prefers-color-scheme: light)").matches;
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsLightMode(lightMode);
     setIsCurrentStateRead(true);
