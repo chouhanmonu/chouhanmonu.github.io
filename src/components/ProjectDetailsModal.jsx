@@ -14,6 +14,7 @@ import GithubIcon from "@/assets/icons/GithubIcon";
 import Tag from "./Tag";
 import { TECHNOLOGIES } from "@/utils/consts";
 import { getTechFromList } from "@/utils/helpers";
+import Link from "next/link";
 
 const mapTagToEl = (tag, isShort = true) => {
   switch (tag.toLowerCase()) {
@@ -139,11 +140,13 @@ export default function ProjectDetailsModal({ project, onClose }) {
 
           <ul className="flex gap-3 flex-wrap">
             {techStack.map((tech, i) => (
-              <li
-                key={i}
-                className="flex gap-2 border py-1 px-2 border-gray-700 rounded-md items-center"
-              >
-                {tech.element}
+              <li key={i}>
+                <Link
+                  href={tech.link}
+                  className="flex gap-2 border py-1 px-2 border-gray-700 rounded-md items-center hover:border-primary-500 transition-colors hover:[&_.child]:text-primary-500!"
+                >
+                  {tech.element}
+                </Link>
               </li>
             ))}
           </ul>

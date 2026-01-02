@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Modal from "react-responsive-modal";
 import ProjectDetailsModal from "./ProjectDetailsModal";
+import Link from "next/link";
 
 export default function HeroProject({ project, stopAutoPlay }) {
   const { imageUrl, title, summary, technologies, overview, keyFeatures } =
@@ -50,11 +51,13 @@ export default function HeroProject({ project, stopAutoPlay }) {
               <div className="text-gray-400 light:text-gray-600">{summary}</div>
               <ul className="flex gap-3 flex-wrap mt-4 max-md:hidden">
                 {techStack.slice(0, 5).map((tech, i) => (
-                  <li
-                    key={i}
-                    className="flex gap-2 border py-1 px-2 border-gray-700 rounded-md items-center"
-                  >
-                    {tech.element}
+                  <li key={i}>
+                    <Link
+                      href={tech.link || "#"}
+                      className="flex gap-2 border py-1 px-2 border-gray-700 rounded-md items-center hover:border-primary-500 transition-colors hover:[&_.child]:text-primary-500!"
+                    >
+                      {tech.element}
+                    </Link>
                   </li>
                 ))}
                 {techStack.length > 5 && <li>...</li>}

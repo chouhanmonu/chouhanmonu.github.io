@@ -48,11 +48,13 @@ export default function Home() {
           <div className="mt-8 max-md:mt-4">
             <ul className="flex gap-4 justify-center flex-wrap max-md:justify-start">
               {TECHNOLOGIES.map((techPill, i) => (
-                <li
-                  key={i}
-                  className="flex gap-2 border py-1 px-2 border-gray-700 rounded-md items-center"
-                >
-                  {techPill.element}
+                <li key={i}>
+                  <Link
+                    href={techPill.link || "#"}
+                    className="flex gap-2 border py-1 px-2 border-gray-700 rounded-md items-center hover:border-primary-500 transition-colors hover:[&_.child]:text-primary-500!"
+                  >
+                    {techPill.element}
+                  </Link>
                 </li>
               ))}
             </ul>

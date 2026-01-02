@@ -65,7 +65,7 @@ const techIconProps = {
   className: "w-5",
 };
 const techTextProps = {
-  className: "text-gray-400 light:text-gray-600",
+  className: "text-gray-400 transition-colors light:text-gray-600 child",
 };
 export const HTML = {
   name: "html",
@@ -75,6 +75,7 @@ export const HTML = {
       <span {...techTextProps}>HTML</span>
     </>
   ),
+  link: "https://html.spec.whatwg.org",
 };
 
 export const CSS = {
@@ -85,6 +86,7 @@ export const CSS = {
       <span {...techTextProps}>CSS</span>
     </>
   ),
+  link: "https://www.w3.org/Style/CSS/",
 };
 
 export const JAVASCRIPT = {
@@ -95,6 +97,7 @@ export const JAVASCRIPT = {
       <span {...techTextProps}>JavaScript</span>
     </>
   ),
+  link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
 };
 
 export const TYPESCRIPT = {
@@ -105,6 +108,7 @@ export const TYPESCRIPT = {
       <span {...techTextProps}>TypeScript</span>
     </>
   ),
+  link: "https://www.typescriptlang.org/",
 };
 
 export const TAILWIND = {
@@ -115,6 +119,7 @@ export const TAILWIND = {
       <span {...techTextProps}>Tailwind CSS</span>
     </>
   ),
+  link: "https://tailwindcss.com/",
 };
 
 export const REACT = {
@@ -125,6 +130,7 @@ export const REACT = {
       <span {...techTextProps}>React</span>
     </>
   ),
+  link: "https://react.dev/",
 };
 
 export const NEXTJS = {
@@ -135,6 +141,7 @@ export const NEXTJS = {
       <span {...techTextProps}>Next.js</span>
     </>
   ),
+  link: "https://nextjs.org/",
 };
 
 export const NODEJS = {
@@ -145,6 +152,7 @@ export const NODEJS = {
       <span {...techTextProps}>Node.js</span>
     </>
   ),
+  link: "https://nodejs.org/",
 };
 
 export const EXPRESS = {
@@ -155,6 +163,7 @@ export const EXPRESS = {
       <span {...techTextProps}>Express.js</span>
     </>
   ),
+  link: "https://expressjs.com/",
 };
 
 export const GRAPHQL = {
@@ -165,6 +174,7 @@ export const GRAPHQL = {
       <span {...techTextProps}>GraphQL</span>
     </>
   ),
+  link: "https://graphql.org/",
 };
 
 export const REDIS = {
@@ -175,6 +185,7 @@ export const REDIS = {
       <span {...techTextProps}>Redis</span>
     </>
   ),
+  link: "https://redis.io/",
 };
 
 export const NESTJS = {
@@ -185,6 +196,7 @@ export const NESTJS = {
       <span {...techTextProps}>NestJS</span>
     </>
   ),
+  link: "https://nestjs.com/",
 };
 
 export const POSTGRESQL = {
@@ -195,6 +207,7 @@ export const POSTGRESQL = {
       <span {...techTextProps}>PostgreSQL</span>
     </>
   ),
+  link: "https://www.postgresql.org/",
 };
 
 export const MONGODB = {
@@ -205,6 +218,7 @@ export const MONGODB = {
       <span {...techTextProps}>MongoDB</span>
     </>
   ),
+  link: "https://www.mongodb.com/",
 };
 
 export const MYSQL = {
@@ -215,6 +229,7 @@ export const MYSQL = {
       <span {...techTextProps}>MySQL</span>
     </>
   ),
+  link: "https://www.mysql.com/",
 };
 
 export const DOCKER = {
@@ -225,6 +240,7 @@ export const DOCKER = {
       <span {...techTextProps}>Docker</span>
     </>
   ),
+  link: "https://www.docker.com/",
 };
 
 export const AWS = {
@@ -235,6 +251,7 @@ export const AWS = {
       <span {...techTextProps}>AWS</span>
     </>
   ),
+  link: "https://aws.amazon.com/",
 };
 
 export const GIT = {
@@ -245,6 +262,7 @@ export const GIT = {
       <span {...techTextProps}>Git</span>
     </>
   ),
+  link: "https://git-scm.com/",
 };
 
 export const GITHUB = {
@@ -255,6 +273,7 @@ export const GITHUB = {
       <span {...techTextProps}>GitHub</span>
     </>
   ),
+  link: "https://github.com/",
 };
 
 export const REMIX = {
@@ -265,6 +284,7 @@ export const REMIX = {
       <span {...techTextProps}>Remix</span>
     </>
   ),
+  link: "https://remix.run/",
 };
 
 export const FIGMA = {
@@ -275,6 +295,7 @@ export const FIGMA = {
       <span {...techTextProps}>Figma</span>
     </>
   ),
+  link: "https://www.figma.com/",
 };
 
 export const TRELLO = {
@@ -285,6 +306,7 @@ export const TRELLO = {
       <span {...techTextProps}>Trello</span>
     </>
   ),
+  link: "https://trello.com/",
 };
 
 export const VERCEL = {
@@ -295,6 +317,7 @@ export const VERCEL = {
       <span {...techTextProps}>Vercel</span>
     </>
   ),
+  link: "https://vercel.com/",
 };
 
 export const SHOPIFY = {
@@ -305,6 +328,7 @@ export const SHOPIFY = {
       <span {...techTextProps}>Shopify</span>
     </>
   ),
+  link: "https://www.shopify.com/",
 };
 
 export const GO = {
@@ -315,6 +339,7 @@ export const GO = {
       <span {...techTextProps}>Go</span>
     </>
   ),
+  link: "https://go.dev/",
 };
 
 export const DOKKU = {
@@ -325,6 +350,7 @@ export const DOKKU = {
       <span {...techTextProps}>Dokku</span>
     </>
   ),
+  link: "https://dokku.com/",
 };
 
 export const SOCKETIO = {
@@ -335,6 +361,7 @@ export const SOCKETIO = {
       <span {...techTextProps}>Sokcet.IO</span>
     </>
   ),
+  link: "https://socket.io/",
 };
 
 export const SUPABASE = {
@@ -345,6 +372,7 @@ export const SUPABASE = {
       <span {...techTextProps}>Supabase</span>
     </>
   ),
+  link: "https://supabase.com/",
 };
 
 export const ROCKETCHAT = {
@@ -355,6 +383,7 @@ export const ROCKETCHAT = {
       <span {...techTextProps}>Rocket.Chat</span>
     </>
   ),
+  link: "https://www.rocket.chat/",
 };
 
 export const RAZORPAY = {
@@ -365,6 +394,7 @@ export const RAZORPAY = {
       <span {...techTextProps}>Razorpay</span>
     </>
   ),
+  link: "https://razorpay.com/",
 };
 
 export const TECHNOLOGIES = [
