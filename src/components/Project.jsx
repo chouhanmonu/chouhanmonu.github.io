@@ -42,13 +42,13 @@ export default function Project({ project }) {
             style={{ objectFit: "cover", objectPosition: "center" }}
           />
         </div>
-        <div className="max-md:mb-0">
+        <div>
           <div className="text-2xl tracking-tight leading-10 font-heading font-medium group-hover:text-primary-500 transition-colors">
             {title}
           </div>
           <div className="text-gray-400 light:text-gray-600">{summary}</div>
         </div>
-        <ul className="flex gap-3 flex-wrap max-md:hidden">
+        <ul className="flex gap-3 flex-wrap mb-0 max-md:hidden">
           {techStack.slice(0, 4).map((tech, i) => (
             <li
               key={i}
@@ -59,6 +59,14 @@ export default function Project({ project }) {
           ))}
           {techStack.length > 4 && <li>...</li>}
         </ul>
+        <div className="hidden max-md:block">
+          <div
+            tabIndex={0}
+            className="inline-block underline underline-offset-4 text-gray-400 cursor-pointer hover:cursor-pointer transition-colors hover:text-primary-500 light:text-gray-600"
+          >
+            <span>View details</span>
+          </div>
+        </div>
       </motion.li>
       <Modal
         classNames={{

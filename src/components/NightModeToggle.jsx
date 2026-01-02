@@ -32,7 +32,7 @@ export default function NightModeToggle() {
           />
         </>
       ) : (
-        <div className="w-5 h-5 bg-gray-300 blur-xs"></div>
+        <div className="w-5 h-5 bg-gray-300/10 rounded-full"></div>
       )}
     </button>
   );

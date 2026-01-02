@@ -80,7 +80,7 @@ export default function HeroProject({ project, stopAutoPlay }) {
             </div>
           </div>
         </div>
-        <div className="basis-full mt-6 max-md:hidden">
+        <div className="basis-full mt-6 max-md:pb-8">
           <div
             tabIndex={0}
             className="inline-block underline underline-offset-4 text-gray-400 cursor-pointer hover:cursor-pointer transition-colors hover:text-primary-500 light:text-gray-600"

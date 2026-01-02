@@ -16,7 +16,7 @@ export default function Header() {
         )}
       >
         <Logo />
-        <div className="flex gap-8 items-center">
+        <div className="flex gap-8 items-center max-md:gap-4">
           <nav aria-label="Main">
             <ul className="flex gap-4 items-center max-md:gap-3">
               {MAIN_NAV.map((link, i) => (
