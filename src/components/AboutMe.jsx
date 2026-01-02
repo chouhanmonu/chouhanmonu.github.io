@@ -75,13 +75,13 @@ export default function AboutMe() {
         className="basis-[380px] aspect-2/3 relative"
       >
         <Image
-          className="rounded-md max-md:mx-auto"
-          src="/images/photo.jpeg"
+          className="max-md:mx-auto rounded-md"
+          src="/images/photo.png"
           alt="My photo"
           fill
           loading="eager"
           sizes="(max-width: 768px) 100vw, 380px"
-          style={{ objectFit: "contain", objectPosition: "center" }}
+          style={{ objectFit: "cover", objectPosition: "center" }}
         />
       </motion.div>
     </div>

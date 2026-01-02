@@ -1,5 +1,6 @@
 import AboutMeBrief from "@/components/AboutMeBrief";
 import Contact from "@/components/Contact";
+import FactsAndFigures from "@/components/FactsAndFigures";
 import HeroProjectsSlider from "@/components/HeroProjectsSlider";
 import SectionTitle from "@/components/SectionTitle";
 import { TECHNOLOGIES } from "@/utils/consts";
@@ -42,7 +43,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center text-gray-400 max-md:mt-8 max-md:text-left light:text-gray-600">
+          <div className="max-md:mt-8">
+            <FactsAndFigures />
+          </div>
+
+          <div className="text-center text-gray-400 mt-14 max-md:mt-8 max-md:text-left light:text-gray-600">
             Technologies I have experience with:
           </div>
           <div className="mt-8 max-md:mt-4">
