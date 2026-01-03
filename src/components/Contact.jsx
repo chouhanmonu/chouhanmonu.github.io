@@ -168,7 +168,7 @@ export default function Contact() {
             <li key={i}>
               <Link
                 href={link.link || "#"}
-                className="flex gap-2 border py-1 px-2 border-gray-700 rounded-md items-center text-gray-400 transition-colors hover:text-primary-500 hover:border-primary-500 light:text-gray-600"
+                className="flex gap-2 border py-1 px-2 border-gray-700 rounded-md items-center text-gray-400 transition-colors hover:text-primary-500! hover:border-primary-500 light:text-gray-600"
               >
                 {link.icon}
                 {link.label}
