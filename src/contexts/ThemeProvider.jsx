@@ -23,9 +23,10 @@ export default function ThemeContextProvider({ children }) {
   }
 
   useEffect(() => {
-    const lightMode =
-      sessionStorage.getItem("theme") === "light" ||
-      matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = sessionStorage.getItem("theme");
+    const lightMode = theme
+      ? theme === "light"
+      : matchMedia("(prefers-color-scheme: light)").matches;
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsLightMode(lightMode);
     setIsCurrentStateRead(true);

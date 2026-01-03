@@ -59,7 +59,10 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: `(function () {
               try {
-                const lightMode = sessionStorage.getItem("theme") === "light" || matchMedia("(prefers-color-scheme: light)").matches;
+                const theme = sessionStorage.getItem("theme");
+                const lightMode = theme
+                  ? theme === "light"
+                  : matchMedia("(prefers-color-scheme: light)").matches;
                 if (lightMode) document.documentElement.classList.add("light");
                 if (!lightMode) document.documentElement.classList.remove("light");
               } catch (_) {}

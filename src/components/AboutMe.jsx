@@ -76,7 +76,7 @@ export default function AboutMe() {
       >
         <Image
           className="max-md:mx-auto rounded-md"
-          src="/images/photo.png"
+          src="/images/photo.webp"
           alt="My photo"
           fill
           loading="eager"
