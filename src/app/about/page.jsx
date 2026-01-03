@@ -1,32 +1,33 @@
-import GithubIcon from "@/assets/icons/GithubIcon";
-import ButtonSecondary from "@/components/ButtonSecondary";
-import { CONTACT_PAGE, TECHNOLOGIES } from "@/utils/consts";
+import { APP_URL, NAME, TECHNOLOGIES } from "@/utils/consts";
 import { getSectionClasses } from "@/utils/helpers";
-import {
-  ArrowTrendingUpIcon,
-  ArrowUpRightIcon,
-  BoltIcon,
-  CodeBracketIcon,
-  CubeIcon,
-} from "@heroicons/react/24/outline";
-import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
-import { CloudArrowDownIcon } from "@heroicons/react/24/outline";
 import classNames from "classnames";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Button from "@/components/Button";
 import SectionTitle from "@/components/SectionTitle";
 import SectionSubtitle from "@/components/SectionSubtitle";
 import AboutMe from "@/components/AboutMe";
 import Connect from "@/components/Connect";
 import FactsAndFigures from "@/components/FactsAndFigures";
 
+export const metadata = {
+  title: `About | ${NAME}`,
+  description:
+    "Learn more about Monu Chouhan, a senior full-stack developer with experience building scalable web applications, solving real-world problems, and delivering impactful digital products.",
+  openGraph: {
+    title: `About ${NAME}`,
+    description:
+      "Background, experience, and values of a software engineer passionate about building meaningful, high-quality software applications.",
+    url: `${APP_URL}/about/`,
+    type: "profile",
+  },
+};
+
 export default function About() {
   return (
     <>
       {/* about section */}
       <div className={classNames(getSectionClasses())}>
+        <h1 className="sr-only">About Me</h1>
         <AboutMe />
       </div>
       {/* Facts and figures section */}

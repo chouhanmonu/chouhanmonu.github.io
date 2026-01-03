@@ -10,7 +10,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
-import { CONTACT_PAGE } from "@/utils/consts";
+import { CONTACT_PAGE, MY_GITHUB_LINK } from "@/utils/consts";
 import { motion } from "motion/react";
 
 export default function AboutMe() {
@@ -33,11 +33,7 @@ export default function AboutMe() {
         <div className="flex gap-3 mt-8 max-md:flex-col max-md:items-start max-md:mt-6">
           <ButtonSecondary
             onClick={() =>
-              window.open(
-                "https://github.com/chouhanmonu/",
-                "_blank",
-                "noopener,noreferrer"
-              )
+              window.open(MY_GITHUB_LINK, "_blank", "noopener,noreferrer")
             }
           >
             <GithubIcon className="w-5 h-5" />

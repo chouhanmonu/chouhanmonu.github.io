@@ -33,9 +33,12 @@ import RazorpayIcon from "@/assets/icons/RazorpayIcon";
 export const NAME = "Monu Chouhan";
 export const NAME_SHORT = "Monu";
 export const EMAIL = "chouhan.monu07@gmail.com";
+export const APP_URL = "https://chouhanmonu.github.io";
+export const MY_GITHUB_LINK = "https://github.com/chouhanmonu";
+export const CURRENT_COMPANY_NAME = "GreyAxis";
 
 export const SOCIAL_LINKS = {
-  linkedIn: "https://www.linkedin.com/in/monu-chouhan-5887991b3/",
+  linkedIn: "https://www.linkedin.com/in/chouhanmonu07",
   twitter: "https://x.com/_monu_chouhan",
   instagram: "https://www.instagram.com/__monu__chouhan____/",
   discord: "https://discord.com/users/monuchouhan_58246",

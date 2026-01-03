@@ -1,4 +1,4 @@
-import { NAME } from "../utils/consts";
+import { APP_URL, NAME } from "../utils/consts";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { PrimeReactProvider } from "primereact/api";
@@ -43,6 +43,13 @@ export const metadata = {
   title: `Software Engineer | ${NAME}`,
   description:
     "Senior full-stack developer crafting end-to-end web applications with purpose. I believe great technology makes life better—driven by curiosity and learning.",
+  openGraph: {
+    title: `Software Engineer | ${NAME}`,
+    description:
+      "Portfolio of a senior full-stack developer showcasing scalable web apps, real-world projects, and engineering experience.",
+    url: `${APP_URL}/`,
+    type: "website",
+  },
   icons: {
     icon: [
       { url: "/favicon.png", sizes: "32x32", type: "image/png" },

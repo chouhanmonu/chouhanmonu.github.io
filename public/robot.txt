@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chouhanmonu.github.io/sitemap.xml

@@ -1,13 +1,27 @@
 import { getSectionClasses } from "@/utils/helpers";
 import { EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import React from "react";
-import { EMAIL } from "@/utils/consts";
+import { APP_URL, EMAIL, NAME } from "@/utils/consts";
 import Contact from "@/components/Contact";
+
+export const metadata = {
+  title: `Contact | ${NAME}`,
+  description:
+    "Get in touch with Monu Chouhan for full-stack development opportunities, freelance projects, collaborations, or technical consulting.",
+  openGraph: {
+    title: `Contact ${NAME}`,
+    description:
+      "Reach out to discuss software development projects, engineering roles, or collaboration opportunities.",
+    url: `${APP_URL}/contact/`,
+    type: "website",
+  },
+};
 
 export default function ContactPage() {
   return (
     <>
       <div className={getSectionClasses()}>
+        <h1 className="sr-only">Get in Touch</h1>
         <div className="space-y-8">
           <Contact />
 

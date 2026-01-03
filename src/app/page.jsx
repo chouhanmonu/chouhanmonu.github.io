@@ -3,15 +3,26 @@ import Contact from "@/components/Contact";
 import FactsAndFigures from "@/components/FactsAndFigures";
 import HeroProjectsSlider from "@/components/HeroProjectsSlider";
 import SectionTitle from "@/components/SectionTitle";
-import { TECHNOLOGIES } from "@/utils/consts";
+import {
+  APP_URL,
+  CURRENT_COMPANY_NAME,
+  MY_GITHUB_LINK,
+  NAME,
+  SOCIAL_LINKS,
+  TECHNOLOGIES,
+} from "@/utils/consts";
 import { getSectionClasses } from "@/utils/helpers";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 
 export default function Home() {
   return (
     <>
       <div className={getSectionClasses()}>
+        <h1 className="sr-only">
+          Senior Full-Stack Software Engineer Building Scalable Web Applications
+        </h1>
         <HeroProjectsSlider />
         <div className="mt-4 text-center">
           <Link
@@ -76,6 +87,64 @@ export default function Home() {
           <Contact />
         </div>
       </div>
+
+      <Script
+        id="person-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "@id": `${APP_URL}/#person`,
+            name: NAME,
+            url: `${APP_URL}/`,
+            jobTitle: "Senior Full Stack Developer",
+            description:
+              "Senior full-stack developer building scalable, high-performance web applications using modern technologies.",
+            sameAs: [
+              MY_GITHUB_LINK,
+              SOCIAL_LINKS.linkedIn,
+              SOCIAL_LINKS.discord,
+              SOCIAL_LINKS.twitter,
+            ],
+            knowsAbout: [
+              "Software Engineering",
+              "Full Stack Development",
+              "Next.js",
+              "React",
+              "Node.js",
+              "NestJS",
+              "Go",
+              "AWS",
+              "Docker",
+              "System Design",
+            ],
+            worksFor: {
+              "@type": "Organization",
+              name: CURRENT_COMPANY_NAME,
+            },
+          }),
+        }}
+      />
+
+      <Script
+        id="website-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": `${APP_URL}/#website`,
+            url: `${APP_URL}/`,
+            name: `${NAME} - Software Engineer`,
+            description: `Portfolio website of ${NAME}, a senior full-stack developer building scalable, high-performance web applications.`,
+            publisher: {
+              "@type": "Person",
+              "@id": `${APP_URL}/#person`,
+            },
+          }),
+        }}
+      />
     </>
   );
 }
