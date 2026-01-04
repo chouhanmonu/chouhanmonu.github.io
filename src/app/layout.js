@@ -42,11 +42,11 @@ const titleFont = Roboto_Slab({
 export const metadata = {
   title: `Software Engineer | ${NAME}`,
   description:
-    "Senior full-stack developer crafting end-to-end web applications with purpose. I believe great technology makes life better—driven by curiosity and learning.",
+    "Software engineer crafting end-to-end web applications with purpose. I believe great technology makes life better—driven by curiosity and learning.",
   openGraph: {
     title: `Software Engineer | ${NAME}`,
     description:
-      "Portfolio of a senior full-stack developer showcasing scalable web apps, real-world projects, and engineering experience.",
+      "Portfolio of a software engineer showcasing scalable web apps, real-world projects, and engineering experience.",
     url: `${APP_URL}/`,
     type: "website",
   },

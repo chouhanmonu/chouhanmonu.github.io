@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <div className={getSectionClasses()}>
         <h1 className="sr-only">
-          Senior Full-Stack Software Engineer Building Scalable Web Applications
+          Software Engineer Building Scalable Web Applications
         </h1>
         <HeroProjectsSlider />
         <div className="mt-4 text-center">
@@ -98,9 +98,9 @@ export default function Home() {
             "@id": `${APP_URL}/#person`,
             name: NAME,
             url: `${APP_URL}/`,
-            jobTitle: "Senior Full Stack Developer",
+            jobTitle: "Software engineer",
             description:
-              "Senior full-stack developer building scalable, high-performance web applications using modern technologies.",
+              "Software engineer building scalable, high-performance web applications using modern technologies.",
             sameAs: [
               MY_GITHUB_LINK,
               SOCIAL_LINKS.linkedIn,
@@ -137,7 +137,7 @@ export default function Home() {
             "@id": `${APP_URL}/#website`,
             url: `${APP_URL}/`,
             name: `${NAME} - Software Engineer`,
-            description: `Portfolio website of ${NAME}, a senior full-stack developer building scalable, high-performance web applications.`,
+            description: `Portfolio website of ${NAME}, a software engineer building scalable, high-performance web applications.`,
             publisher: {
               "@type": "Person",
               "@id": `${APP_URL}/#person`,

@@ -19,10 +19,16 @@ export default function AboutMe() {
       <div className="basis-[420px] flex flex-col gap-6 max-md:mt-5 max-md:gap-3">
         <p className="font-light text-4xl font-title">Hi! I&apos;m monu</p>
         <p>
-          I am a senior full-stack developer from the outskirts of Mumbai. After
-          starting my career as a junior web developer, I soon began working on
-          entire apps, understanding client needs, and collaborating as part of
-          a team with problem-solving in mind.
+          I&apos;m a Software Engineer with 4+ years of experience designing and
+          building scalable, production-ready web systems. My work spans
+          frontend, backend, and infrastructure — but my strength lies in
+          engineering reliable systems, not just shipping features.
+        </p>
+        <p>
+          I&apos;ve worked across the full lifecycle of applications: from
+          architecting APIs and databases, to deploying, monitoring, and scaling
+          services in production. I care deeply about clean abstractions,
+          performance, security, and long-term maintainability.
         </p>
         <p>
           I strongly believe that with the right use of technology, we can make

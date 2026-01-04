@@ -9,7 +9,7 @@ import Script from "next/script";
 export const metadata = {
   title: `Projects | ${NAME}`,
   description:
-    "Explore real-world projects built by a senior full-stack developer—covering scalable web apps, SaaS platforms, e-commerce, and system integrations using modern technologies.",
+    "Explore real-world projects built by a software engineer—covering scalable web apps, SaaS platforms, e-commerce, and system integrations using modern technologies.",
   openGraph: {
     title: `Projects by ${NAME}`,
     description:

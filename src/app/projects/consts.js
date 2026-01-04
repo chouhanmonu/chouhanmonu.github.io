@@ -151,7 +151,7 @@ export const PROJECTS = [
     },
     role: {
       summary:
-        "As lead full-stack developer, I spearheaded the web and backend development to deliver a polished, production-ready core:",
+        "As a software engineer, I spearheaded the web and backend development to deliver a polished, production-ready core:",
       contributions: [
         {
           label: "Frontend Development",
@@ -354,7 +354,7 @@ export const PROJECTS = [
     },
     role: {
       summary:
-        "As the senior full-stack developer and technical lead, I drove the project from concept to MVP:",
+        "As a software engineer, I drove the project from concept to MVP:",
       contributions: [
         {
           label: "Architecture & Data Modeling",
