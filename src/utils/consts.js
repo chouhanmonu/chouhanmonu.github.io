@@ -61,7 +61,7 @@ export const ABOUT_PAGE = {
   href: "/about",
 };
 
-export const MAIN_NAV = [HOME_PAGE, PROJECTS_PAGE, ABOUT_PAGE, CONTACT_PAGE];
+export const MAIN_NAV = [PROJECTS_PAGE, ABOUT_PAGE, CONTACT_PAGE];
 
 // icons
 const techIconProps = {

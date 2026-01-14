@@ -1,5 +1,6 @@
 "use client";
 
+import { NAME } from "@/utils/consts";
 import classNames from "classnames";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -11,7 +12,11 @@ export default function Logo() {
     setTimeout(() => setStartAnimation(true), 1600);
   }, []);
   return (
-    <Link href="/" className="font-light text-4xl font-title max-md:text-2xl">
+    <Link
+      href="/"
+      className="font-light text-4xl font-title max-md:text-2xl"
+      aria-label={`${NAME} homepage`}
+    >
       <div className="flex items-center">
         <span>m</span>
         <span

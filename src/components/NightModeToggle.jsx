@@ -9,7 +9,10 @@ export default function NightModeToggle() {
     useThemeContext();
 
   return (
-    <button className="cursor-pointer" onClick={handleToggleLightMode}>
+    <button
+      className="cursor-pointer max-md:hidden"
+      onClick={handleToggleLightMode}
+    >
       {isCurrentStateRead ? (
         <>
           <MoonIcon
