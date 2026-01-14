@@ -1,4 +1,4 @@
-import { APP_URL, NAME } from "../utils/consts";
+import { APP_URL, MAIN_NAV, NAME } from "../utils/consts";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { PrimeReactProvider } from "primereact/api";
@@ -76,6 +76,18 @@ export default function RootLayout({ children }) {
             })();`,
           }}
         ></script>
+        <Script
+          id="site-navigation-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SiteNavigationElement",
+              name: MAIN_NAV.map((nav) => nav.label),
+              url: MAIN_NAV.map((nav) => `${APP_URL}${nav.href}`),
+            }),
+          }}
+        />
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FFWDHEYXYJ"
