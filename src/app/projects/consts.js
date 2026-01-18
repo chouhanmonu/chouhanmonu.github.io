@@ -74,7 +74,6 @@ export const PROJECTS = [
     imageUrl: "/images/split-payments.webp",
     tags: ["work-in-progress"],
     gitHub: {
-      private: true,
       link: "https://github.com/chouhanmonu/split-payment",
     },
     overview:
@@ -279,105 +278,105 @@ export const PROJECTS = [
     websiteLink: "https://www.teedex.in/",
     tags: ["ongoing"],
   },
-  // {
-  //   title: "Chat",
-  //   summary:
-  //     "An open-source, end-to-end encrypted real-time chat and notes platform designed for scalability, customization, and collaboration.",
-  //   overview:
-  //     "Designed and engineered a modular, open-source messaging platform positioned as an alternative to proprietary apps like WhatsApp or Slack. The system supports direct and group messaging, collaborative note-taking, and media sharing while prioritizing end-to-end encryption (E2EE), extensibility, and performance. Built using a microservices architecture, the MVP addresses limitations in existing chat solutions such as rigid interfaces and poor customization, providing a strong foundation for community-driven enhancements.",
-  //   keyFeatures: [
-  //     {
-  //       label: "Comprehensive Real-Time Messaging",
-  //       description:
-  //         "Supports direct messages and group chats with replies, emoji reactions, message forwarding, attachments, read receipts, search, starring, muting, blocking, role-based permissions, and chat history management.",
-  //     },
-  //     {
-  //       label: "Integrated Notes Module",
-  //       description:
-  //         "Includes rich text notes with checklists, bullet lists, pinning, titles, and solid-color backgrounds, offering a Keep-like note-taking experience directly within the chat app.",
-  //     },
-  //     {
-  //       label: "End-to-End Encryption & Security",
-  //       description:
-  //         "Implements E2EE for private conversations, JWT-based authentication with refresh tokens, Redis-backed rate limiting, and abuse prevention mechanisms.",
-  //     },
-  //     {
-  //       label: "High-Performance Real-Time Delivery",
-  //       description:
-  //         "Leverages Redis PubSub with Socket.io to achieve sub-100ms message delivery, optimized for concurrent users and high-throughput messaging.",
-  //     },
-  //   ],
-  //   technologies: {
-  //     description:
-  //       "Implemented a microservices-based backend using NestJS for scalable, type-safe APIs and real-time messaging services. MongoDB was chosen for its flexible schema design, while Redis handles caching, PubSub, and rate limiting. Services are containerized with Docker and orchestrated via Docker Compose, with CI/CD pipelines powered by GitHub Actions pushing images to DockerHub. The web client is built with React and Vite for fast iteration, while the mobile app uses Flutter with Bloc for reactive state management.",
-  //     stacks: [
-  //       {
-  //         category: "API Service",
-  //         technologies: [
-  //           "NestJS",
-  //           "MongoDB (Mongoose)",
-  //           "JWT & Refresh Tokens (Passport-JWT)",
-  //           "Redis (ioredis)",
-  //           "Nodemailer",
-  //           "Docker",
-  //           "GitHub Actions",
-  //         ],
-  //       },
-  //       {
-  //         category: "Messaging Service",
-  //         technologies: [
-  //           "NestJS",
-  //           "Socket.io",
-  //           "Redis (PubSub & Adapter)",
-  //           "BullMQ",
-  //           "Firebase Push Notifications",
-  //           "Docker",
-  //         ],
-  //       },
-  //       {
-  //         category: "Web Application",
-  //         technologies: [
-  //           "React",
-  //           "Vite",
-  //           "Socket.io Client",
-  //           "Slate.js",
-  //           "React Query",
-  //           "Axios",
-  //         ],
-  //       },
-  //       {
-  //         category: "Mobile Application",
-  //         technologies: ["Flutter", "Flutter Bloc"],
-  //       },
-  //     ],
-  //     list: ["NestJS", "MongoDB", "Redis", "Socket.io", "React", "Docker"],
-  //   },
-  //   role: {
-  //     summary:
-  //       "As a software engineer, I drove the project from concept to MVP:",
-  //     contributions: [
-  //       {
-  //         label: "Architecture & Data Modeling",
-  //         description:
-  //           "Designed MongoDB schemas for users, chats, notes, and media with scalability and E2EE constraints in mind, and architected microservices for separation of concerns and performance.",
-  //       },
-  //       {
-  //         label: "Core Development",
-  //         description:
-  //           "Led implementation of API and messaging services using NestJS and Socket.io, integrated rich text editing for notes, and enforced best practices like secure token rotation, validation, and structured error handling.",
-  //       },
-  //       {
-  //         label: "DevOps & Performance Optimization",
-  //         description:
-  //           "Set up CI/CD pipelines with GitHub Actions and DockerHub, optimized Redis-based throttling and caching, and improved client performance with lazy loading and cursor-based pagination, reducing setup time by 80%.",
-  //       },
-  //     ],
-  //   },
-  //   outcomes:
-  //     "Delivered a battle-tested MVP capable of supporting real-time encrypted messaging and collaborative notes at scale. The platform achieved sub-100ms message delivery in internal testing and provides a flexible foundation for community-driven forks, feature extensions, and long-term evolution as an open-source communication ecosystem.",
-  //   imageUrl: "/images/chat.webp",
-  //   tags: ["work-in-progress"],
-  // },
+  {
+    title: "Chat",
+    summary:
+      "An open-source, end-to-end encrypted real-time chat and notes platform designed for scalability, customization, and collaboration.",
+    overview:
+      "Designed and engineered a modular, open-source messaging platform positioned as an alternative to proprietary apps like WhatsApp or Slack. The system supports direct and group messaging, collaborative note-taking, and media sharing while prioritizing end-to-end encryption (E2EE), extensibility, and performance. Built using a microservices architecture, the MVP addresses limitations in existing chat solutions such as rigid interfaces and poor customization, providing a strong foundation for community-driven enhancements.",
+    keyFeatures: [
+      {
+        label: "Comprehensive Real-Time Messaging",
+        description:
+          "Supports direct messages and group chats with replies, emoji reactions, message forwarding, attachments, read receipts, search, starring, muting, blocking, role-based permissions, and chat history management.",
+      },
+      {
+        label: "Integrated Notes Module",
+        description:
+          "Includes rich text notes with checklists, bullet lists, pinning, titles, and solid-color backgrounds, offering a Keep-like note-taking experience directly within the chat app.",
+      },
+      {
+        label: "End-to-End Encryption & Security",
+        description:
+          "Implements E2EE for private conversations, JWT-based authentication with refresh tokens, Redis-backed rate limiting, and abuse prevention mechanisms.",
+      },
+      {
+        label: "High-Performance Real-Time Delivery",
+        description:
+          "Leverages Redis PubSub with Socket.io to achieve sub-100ms message delivery, optimized for concurrent users and high-throughput messaging.",
+      },
+    ],
+    technologies: {
+      description:
+        "Implemented a microservices-based backend using NestJS for scalable, type-safe APIs and real-time messaging services. MongoDB was chosen for its flexible schema design, while Redis handles caching, PubSub, and rate limiting. Services are containerized with Docker and orchestrated via Docker Compose, with CI/CD pipelines powered by GitHub Actions pushing images to DockerHub. The web client is built with React and Vite for fast iteration, while the mobile app uses Flutter with Bloc for reactive state management.",
+      stacks: [
+        {
+          category: "API Service",
+          technologies: [
+            "NestJS",
+            "MongoDB (Mongoose)",
+            "JWT & Refresh Tokens (Passport-JWT)",
+            "Redis (ioredis)",
+            "Nodemailer",
+            "Docker",
+            "GitHub Actions",
+          ],
+        },
+        {
+          category: "Messaging Service",
+          technologies: [
+            "NestJS",
+            "Socket.io",
+            "Redis (PubSub & Adapter)",
+            "BullMQ",
+            "Firebase Push Notifications",
+            "Docker",
+          ],
+        },
+        {
+          category: "Web Application",
+          technologies: [
+            "React",
+            "Vite",
+            "Socket.io Client",
+            "Slate.js",
+            "React Query",
+            "Axios",
+          ],
+        },
+        {
+          category: "Mobile Application",
+          technologies: ["Flutter", "Flutter Bloc"],
+        },
+      ],
+      list: ["NestJS", "MongoDB", "Redis", "Socket.io", "React", "Docker"],
+    },
+    role: {
+      summary:
+        "As a senior software engineer, I drove the project from concept to MVP:",
+      contributions: [
+        {
+          label: "Architecture & Data Modeling",
+          description:
+            "Designed MongoDB schemas for users, chats, notes, and media with scalability and E2EE constraints in mind, and architected microservices for separation of concerns and performance.",
+        },
+        {
+          label: "Core Development",
+          description:
+            "Led implementation of API and messaging services using NestJS and Socket.io, integrated rich text editing for notes, and enforced best practices like secure token rotation, validation, and structured error handling.",
+        },
+        {
+          label: "DevOps & Performance Optimization",
+          description:
+            "Set up CI/CD pipelines with GitHub Actions and DockerHub, optimized Redis-based throttling and caching, and improved client performance with lazy loading and cursor-based pagination, reducing setup time by 80%.",
+        },
+      ],
+    },
+    outcomes:
+      "Delivered a battle-tested MVP capable of supporting real-time encrypted messaging and collaborative notes at scale. The platform achieved sub-100ms message delivery in internal testing and provides a flexible foundation for community-driven forks, feature extensions, and long-term evolution as an open-source communication ecosystem.",
+    imageUrl: "/images/chat.webp",
+    tags: ["work-in-progress"],
+  },
   {
     title: "Lawn Care",
     summary:
@@ -577,7 +576,6 @@ export const PROJECTS = [
     imageUrl: "/images/galleryske.webp",
     websiteLink: "https://galleryske.com/",
     gitHub: {
-      private: true,
       link: "https://github.com/chouhanmonu/galleryske",
     },
   },
