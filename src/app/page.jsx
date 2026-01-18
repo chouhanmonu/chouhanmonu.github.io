@@ -7,6 +7,8 @@ import {
   APP_URL,
   CURRENT_COMPANY_NAME,
   MY_GITHUB_LINK,
+  MY_ROLE,
+  MY_ROLE_FORMATTED,
   NAME,
   SOCIAL_LINKS,
   TECHNOLOGIES,
@@ -21,7 +23,7 @@ export default function Home() {
     <>
       <div className={getSectionClasses()}>
         <h1 className="sr-only">
-          Software Engineer Building Scalable Web Applications
+          {MY_ROLE_FORMATTED} building scalable web applications
         </h1>
         <HeroProjectsSlider />
         <div className="mt-4 text-center">
@@ -42,7 +44,7 @@ export default function Home() {
                 className="w-full -z-1"
                 src="/images/software-engineer-illustration.webp"
                 quality={100}
-                alt="An illustration representing software engineer"
+                alt="An illustration representing a software engineer"
                 sizes="(max-width: 768px) 100vw, 488px"
                 loading="lazy"
                 fill
@@ -98,9 +100,8 @@ export default function Home() {
             "@id": `${APP_URL}/#person`,
             name: NAME,
             url: `${APP_URL}/`,
-            jobTitle: "Software engineer",
-            description:
-              "Software engineer building scalable, high-performance web applications using modern technologies.",
+            jobTitle: MY_ROLE_FORMATTED,
+            description: `${MY_ROLE_FORMATTED} building scalable, high-performance web applications using modern technologies.`,
             sameAs: [
               MY_GITHUB_LINK,
               SOCIAL_LINKS.linkedIn,
@@ -136,8 +137,8 @@ export default function Home() {
             "@type": "WebSite",
             "@id": `${APP_URL}/#website`,
             url: `${APP_URL}/`,
-            name: `${NAME} - Software Engineer`,
-            description: `Portfolio website of ${NAME}, a software engineer building scalable, high-performance web applications.`,
+            name: `${NAME} - ${MY_ROLE_FORMATTED}`,
+            description: `Portfolio website of ${NAME}, a ${MY_ROLE} building scalable, high-performance web applications.`,
             publisher: {
               "@type": "Person",
               "@id": `${APP_URL}/#person`,

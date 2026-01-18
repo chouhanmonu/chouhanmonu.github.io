@@ -1,4 +1,4 @@
-import { APP_URL, NAME, TECHNOLOGIES } from "@/utils/consts";
+import { APP_URL, MY_ROLE, NAME, TECHNOLOGIES } from "@/utils/consts";
 import { getSectionClasses } from "@/utils/helpers";
 import classNames from "classnames";
 import Link from "next/link";
@@ -11,11 +11,10 @@ import FactsAndFigures from "@/components/FactsAndFigures";
 
 export const metadata = {
   title: `About | ${NAME}`,
-  description: `Learn more about ${NAME}, a software engineer with 4+ years of experience designing and building scalable, reliable web systems, with strong backend, infrastructure, and full-stack expertise.`,
+  description: `Learn more about ${NAME}, a ${MY_ROLE} with 4+ years of experience designing and building scalable, reliable web systems, with strong backend, infrastructure, and full-stack expertise.`,
   openGraph: {
     title: `About ${NAME}`,
-    description:
-      "Background, experience, and engineering values of a software engineer focused on system design, performance, security, and building high-quality, production-ready software.",
+    description: `Background, experience, and engineering values of a ${MY_ROLE} focused on system design, performance, security, and building high-quality, production-ready software.`,
     url: `${APP_URL}/about/`,
     type: "profile",
   },

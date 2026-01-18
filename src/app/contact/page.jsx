@@ -6,8 +6,7 @@ import Contact from "@/components/Contact";
 
 export const metadata = {
   title: `Contact | ${NAME}`,
-  description:
-    "Get in touch with Monu Chouhan for full-stack development opportunities, freelance projects, collaborations, or technical consulting.",
+  description: `Get in touch with ${NAME} for development opportunities, freelance projects, collaborations, or technical consulting.`,
   openGraph: {
     title: `Contact ${NAME}`,
     description:

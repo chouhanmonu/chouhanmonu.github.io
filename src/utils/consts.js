@@ -36,6 +36,8 @@ export const EMAIL = "chouhan.monu07@gmail.com";
 export const APP_URL = "https://chouhanmonu.github.io";
 export const MY_GITHUB_LINK = "https://github.com/chouhanmonu";
 export const CURRENT_COMPANY_NAME = "GreyAxis";
+export const MY_ROLE = "senior software engineer";
+export const MY_ROLE_FORMATTED = "Senior software engineer";
 
 export const SOCIAL_LINKS = {
   linkedIn: "https://www.linkedin.com/in/chouhanmonu07",

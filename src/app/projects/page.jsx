@@ -3,13 +3,12 @@ import classNames from "classnames";
 import React from "react";
 import Project from "@/components/Project";
 import { PROJECTS } from "./consts";
-import { APP_URL, NAME } from "@/utils/consts";
+import { APP_URL, MY_ROLE, NAME } from "@/utils/consts";
 import Script from "next/script";
 
 export const metadata = {
   title: `Projects | ${NAME}`,
-  description:
-    "Explore real-world projects built by a software engineer—covering scalable web apps, SaaS platforms, e-commerce, and system integrations using modern technologies.",
+  description: `Explore real-world projects built by a ${MY_ROLE}—covering scalable web apps, SaaS platforms, e-commerce, and system integrations using modern technologies.`,
   openGraph: {
     title: `Projects by ${NAME}`,
     description:

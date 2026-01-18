@@ -1,6 +1,7 @@
 "use client";
 
 import { useIsIntersecting } from "@/hooks/useIsIntersecting";
+import { MY_ROLE } from "@/utils/consts";
 import classNames from "classnames";
 import { useState } from "react";
 
@@ -25,9 +26,8 @@ export default function AboutMeBrief() {
         </span>
       </div>
       <div className="text-2xl mt-4 leading-10 max-lg:text-xl max-lg:leading-8 max-md:text-base max-md:leading-6 max-md:mt-2">
-        A software engineer crafting end-to-end web applications with purpose. I
-        believe great technology makes life better—driven by curiosity and
-        learning.
+        A {MY_ROLE} crafting end-to-end web applications with purpose. I believe
+        great technology makes life better—driven by curiosity and learning.
       </div>
     </>
   );

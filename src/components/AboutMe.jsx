@@ -10,7 +10,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
-import { CONTACT_PAGE, MY_GITHUB_LINK } from "@/utils/consts";
+import { CONTACT_PAGE, MY_GITHUB_LINK, MY_ROLE } from "@/utils/consts";
 import { motion } from "motion/react";
 
 export default function AboutMe() {
@@ -19,7 +19,7 @@ export default function AboutMe() {
       <div className="basis-[420px] flex flex-col gap-6 max-md:mt-5 max-md:gap-3">
         <p className="font-light text-4xl font-title">Hi! I&apos;m monu</p>
         <p>
-          I&apos;m a Software Engineer with 4+ years of experience designing and
+          I&apos;m a {MY_ROLE} with 4+ years of experience designing and
           building scalable, production-ready web systems. My work spans
           frontend, backend, and infrastructure — but my strength lies in
           engineering reliable systems, not just shipping features.

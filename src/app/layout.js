@@ -1,4 +1,10 @@
-import { APP_URL, MAIN_NAV, NAME } from "../utils/consts";
+import {
+  APP_URL,
+  MAIN_NAV,
+  MY_ROLE,
+  MY_ROLE_FORMATTED,
+  NAME,
+} from "../utils/consts";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { PrimeReactProvider } from "primereact/api";
@@ -41,12 +47,10 @@ const titleFont = Roboto_Slab({
 
 export const metadata = {
   title: `Software Engineer | ${NAME}`,
-  description:
-    "Software engineer crafting end-to-end web applications with purpose. I believe great technology makes life better—driven by curiosity and learning.",
+  description: `${MY_ROLE_FORMATTED} crafting end-to-end web applications with purpose. I believe great technology makes life better—driven by curiosity and learning.`,
   openGraph: {
     title: `Software Engineer | ${NAME}`,
-    description:
-      "Portfolio of a software engineer showcasing scalable web apps, real-world projects, and engineering experience.",
+    description: `Portfolio of a ${MY_ROLE} showcasing scalable web apps, real-world projects, and engineering experience.`,
     url: `${APP_URL}/`,
     type: "website",
   },
@@ -114,7 +118,7 @@ export default function RootLayout({ children }) {
             headingFont.variable,
             bodyFont.variable,
             titleFont.variable,
-            bodyFont.className
+            bodyFont.className,
           )}
         >
           <ThemeContextProvider>
