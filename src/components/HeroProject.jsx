@@ -15,7 +15,7 @@ export default function HeroProject({ project, stopAutoPlay }) {
   const [techStack] = useState(() =>
     technologies.list
       .map((techName) => getTechFromList(techName, TECHNOLOGIES))
-      .filter(Boolean)
+      .filter(Boolean),
   );
 
   const onModalClose = () => setIsModalOpen(false);

@@ -46,7 +46,7 @@ export default function ProjectDetailsModal({ project, onClose }) {
   const [techStack] = useState(() =>
     technologies.list
       .map((techName) => getTechFromList(techName, TECHNOLOGIES))
-      .filter(Boolean)
+      .filter(Boolean),
   );
 
   const parsedTags = tags && JSON.parse(JSON.stringify(tags));
@@ -80,7 +80,7 @@ export default function ProjectDetailsModal({ project, onClose }) {
           </Button>
         </div>
       </div>
-      <div className="p-5 space-y-10 max-md:max-h-[400px]">
+      <div className="p-5 space-y-10">
         <div className="aspect-video rounded-md overflow-hidden relative">
           <Image
             fill
