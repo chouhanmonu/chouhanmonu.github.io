@@ -27,7 +27,9 @@ export default function AboutMeBrief() {
       </div>
       <div className="text-2xl mt-4 leading-10 max-lg:text-xl max-lg:leading-8 max-md:text-base max-md:leading-6 max-md:mt-2">
         A {MY_ROLE} crafting end-to-end web applications with purpose. I believe
-        great technology makes life better—driven by curiosity and learning.
+        great technology makes life better—driven by curiosity, continuous
+        learning, and leveraging AI tools to accelerate development and rapidly
+        validate ideas.
       </div>
     </>
   );

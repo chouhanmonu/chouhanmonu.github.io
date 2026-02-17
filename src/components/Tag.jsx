@@ -10,7 +10,8 @@ export default function Tag({ children, color = "primary" }) {
           "border-amber-500 text-amber-500": color === "amber",
           "border-orange-500 text-orange-500": color === "orange",
           "border-sky-500 text-sky-500": color === "sky",
-        }
+          "border-teal-500 text-teal-500": color === "teal",
+        },
       )}
     >
       {children}

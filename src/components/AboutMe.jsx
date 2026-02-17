@@ -21,8 +21,9 @@ export default function AboutMe() {
         <p>
           I&apos;m a {MY_ROLE} with 4+ years of experience designing and
           building scalable, production-ready web systems. My work spans
-          frontend, backend, and infrastructure — but my strength lies in
-          engineering reliable systems, not just shipping features.
+          frontend, backend, and infrastructure — with a strong focus on
+          engineering reliable systems, while using AI tools to accelerate
+          development and validate ideas faster.
         </p>
         <p>
           I&apos;ve worked across the full lifecycle of applications: from

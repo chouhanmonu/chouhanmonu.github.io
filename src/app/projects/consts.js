@@ -281,19 +281,14 @@ export const PROJECTS = [
   {
     title: "Chat",
     summary:
-      "An open-source, end-to-end encrypted real-time chat and notes platform designed for scalability, customization, and collaboration.",
+      "An open-source, end-to-end encrypted real-time chat app designed for scalability, customization, and collaboration.",
     overview:
-      "Designed and engineered a modular, open-source messaging platform positioned as an alternative to proprietary apps like WhatsApp or Slack. The system supports direct and group messaging, collaborative note-taking, and media sharing while prioritizing end-to-end encryption (E2EE), extensibility, and performance. Built using a microservices architecture, the MVP addresses limitations in existing chat solutions such as rigid interfaces and poor customization, providing a strong foundation for community-driven enhancements.",
+      "Designed a modular, open-source messaging platform with E2EE, microservices architecture, and strong extensibility. Used AI-assisted development to quickly validate app flows and iterate securely, addressing customization and flexibility gaps in existing chat solutions.",
     keyFeatures: [
       {
         label: "Comprehensive Real-Time Messaging",
         description:
           "Supports direct messages and group chats with replies, emoji reactions, message forwarding, attachments, read receipts, search, starring, muting, blocking, role-based permissions, and chat history management.",
-      },
-      {
-        label: "Integrated Notes Module",
-        description:
-          "Includes rich text notes with checklists, bullet lists, pinning, titles, and solid-color backgrounds, offering a Keep-like note-taking experience directly within the chat app.",
       },
       {
         label: "End-to-End Encryption & Security",
@@ -339,7 +334,6 @@ export const PROJECTS = [
             "React",
             "Vite",
             "Socket.io Client",
-            "Slate.js",
             "React Query",
             "Axios",
           ],
@@ -375,7 +369,10 @@ export const PROJECTS = [
     outcomes:
       "Delivered a battle-tested MVP capable of supporting real-time encrypted messaging and collaborative notes at scale. The platform achieved sub-100ms message delivery in internal testing and provides a flexible foundation for community-driven forks, feature extensions, and long-term evolution as an open-source communication ecosystem.",
     imageUrl: "/images/chat.webp",
-    tags: ["work-in-progress"],
+    tags: ["work-in-progress", "ai-powered"],
+    gitHub: {
+      link: "https://github.com/chouhanmonu/test-chat-app",
+    },
   },
   {
     title: "Lawn Care",
